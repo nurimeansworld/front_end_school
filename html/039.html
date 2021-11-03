@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가변 크기 단위 2</title>
+  <style>
+    .one {
+      width: 50%;
+      height: 200px;
+      background-color: darkblue;
+    }
+
+    .two {
+      width: 50%;
+      height: 100px;
+      background-color: red;
+    }
+
+    .three {
+      width: 50vw;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- em, %, rem, vw, vh -->
+
+  <div class="one">
+    <!-- 50%는 부모의 절반 -->
+    <div class="two">test</div>
+  </div>
+
+  <div class="one">
+    <!-- 50vw, 50vh는 보여지는 화면의 절반 -->
+    <!-- 만약 부모가 더 크면 그 이상으로 표시 됨 -->
+    <div class="three">test</div>
+  </div>
+</body>
+
+</html>

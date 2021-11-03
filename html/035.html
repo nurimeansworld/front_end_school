@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 가상 클래스 선택자</title>
+  <style>
+    p::after {
+      content: 'cm';
+    }
+
+    p::before {
+      content: '!!';
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 가상 요소 선택자는 선택이 안됨 -->
+  <!-- ::after로 설정되어있는 것들. 보통 before, after 많이 사용 -->
+  <!-- IE에선 읽지 않으니 중요한 내용은 가상 요소로 적지 말고 오직 장식적인 요소로만 사용 -->
+  <p>10</p>
+</body>
+
+</html>

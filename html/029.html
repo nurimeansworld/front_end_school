@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5. css selector(선택자) - 가상 클래스 선택자</title>
+  <style>
+    /* 홀수번째에 있는 것 선택 */
+    /* .foo:nth-child(2n+1)과 동일 */
+    .foo:nth-child(odd) {
+      color: red;
+    }
+
+    /* 짝수번째에 있는 것 선택 */
+    /* .foo:nth-child(2n)과 동일 */
+    .foo:nth-child(even) {
+      color: blue;
+    }
+
+    input:focus {
+      color: red;
+    }
+
+    input:hover {
+      color: green;
+    }
+
+    input:active {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="foo">1</li> <!-- .foo:first-child -->
+    <li class="foo">2</li>
+    <li class="foo">3</li> <!-- .foo:nth-child(3) -->
+    <li class="foo">4</li>
+    <li class="foo">5</li> <!-- .foo:last-child -->
+  </ul>
+  <form action="./029.html" method="get">
+    <label for="id">ID</label><input id="id" name="id" type="text" value="test">
+    <label for="pw">PW</label><input id="pw" name="pw" type="text" value="test">
+  </form>
+</body>
+
+</html>

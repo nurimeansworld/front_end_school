@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>재밌는거</title>
+  <style>
+    /* hover 했을 때 변경되는 속성은 hover 이전에서도 정의하는 것이 좋음 */
+    div {
+      width: 500px;
+      height: 500px;
+      background: brown;
+      transition: all.5s;
+    }
+
+    div:hover {
+      border-radius: 100px;
+      width: 600px;
+      height: 600px;
+      background: burlywood;
+      transform: translateX(100px) translateY(30px) rotate(720deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
