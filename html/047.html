@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin, padding</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    h1 {
+      border: solid 1px black;
+
+      /* 12시부터 9시까지 시계방향 */
+      /* padding: 10px 20px 30px 40px; */
+
+      /* 위를 풀어서 적었을 때 */
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      padding-left: 40px;
+
+      /* top 10px right left 50px bottom 30px */
+      padding: 10px 50px 30px;
+
+      /* 상하, 좌우 */
+      /* padding: 10px 200px; */
+
+
+      /* margin: 10px 10px 20px 20px; */
+      margin: 10px;
+      /* 마진의 경우
+      동일한 마진을 사용하는 경우 겹치고
+      다른 마진을 갖고 있다면 큰 마진에 겹친다 */
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- body에 margin 0 설정을 하지 않으면 body의 기본 margin 속성이 적용 돼 공간이 조금 생김 -->
+  <h1>hello world</h1>
+  <h1>hello world</h1>
+</body>
+
+</html>

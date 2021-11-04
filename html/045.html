@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radius</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: darkblue;
+    }
+
+    .test {
+      border: 10px solid black;
+      border-top-left-radius: 100px;
+      /* 총 길이가 220px이니  220 - 100 = 120 보다 넘어가면 영향을 줌 */
+      border-top-right-radius: 50px;
+      /* border-bottom-left-radius: 100px; */
+      /* border-bottom-right-radius: 100px; */
+    }
+
+    .one {
+      margin-right: 50px;
+      display: inline-block;
+      border: 10px solid black;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 30px;
+    }
+
+    .two {
+      display: inline-block;
+      border: 10px solid black;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 100px;
+    }
+
+    .three {
+      width: 480px;
+      height: 300px;
+      background: #DB9A2B;
+      border: 10px solid grey;
+      border-radius: 50%;
+      /* border-radius: 150px; */
+      /* border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 80px;
+      border-top-left-radius: 80px; */
+
+    }
+
+
+    body {
+      position: relative;
+    }
+
+    .lion {
+      border: 3px solid black;
+      background-color: burlywood;
+
+    }
+
+    .lion-ear {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 30px;
+    }
+
+    .lion-ear-left {
+      border-top-left-radius: 100px;
+      border-top-right-radius: 50px;
+    }
+
+    .lion-ear-right {
+      border-top-left-radius: 50px;
+      border-top-right-radius: 100px;
+    }
+
+    .lion-face {
+      position: absolute;
+      top: 50px;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      margin: -10px 15px;
+      border-bottom-right-radius: 40%;
+      border-bottom-left-radius: 40%;
+      border-top-right-radius: 50%;
+      border-top-left-radius: 50%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="lion lion-ear lion-ear-left"></div>
+    <div class="lion lion-ear lion-ear-right"></div>
+  </section>
+
+  <div class="lion lion-face"></div>
+  <!-- border까지 합치면 width: 220px; -->
+  <!-- <div class="test"></div> -->
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+
+
+</body>
+
+</html>

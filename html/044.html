@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border, radius</title>
+  <style>
+    /* border-box를 쓰지 않는 한 width에 포함되지 않는다!!! */
+    div {
+      /* 왜 주는가?! */
+      /* 그냥 하면 너무 따닥따닥 붙어 있어서 간격을 주는 것 */
+      margin: 10px;
+    }
+
+    .c1 {
+      border: 1px solid red;
+    }
+
+    .c2 {
+      border: thick solid green;
+    }
+
+    .c3 {
+      /* border: thin dotted blue; */
+      border: 10px dotted blue;
+    }
+
+    .c4 {
+      border: 10px double black;
+    }
+
+    .c5 {
+      border-top: 3px solid grey;
+      border-left: 3px solid grey;
+      border-right: 5px solid black;
+      border-bottom: 5px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- (.c$>p{hello})*4 -->
+  <div class="c1">
+    <p>border: 1px solid red;</p>
+  </div>
+  <div class="c2">
+    <p>border: thick solid green;</p>
+  </div>
+  <div class="c3">
+    <p>border: thin dotted blue;</p>
+  </div>
+  <div class="c4">
+    <p>border: 3px double black;</p>
+  </div>
+  <div class="c5">
+    <p>border-top: 3px solid grey;<br>
+      border-left: 3px solid grey;<br>
+      border-right: 5px solid black;<br>
+      border-bottom: 5px solid black;</p>
+  </div>
+  <div class="c6">
+    <p>hello</p>
+  </div>
+
+</body>
+
+</html>
