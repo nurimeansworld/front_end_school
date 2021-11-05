@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+  <style>
+    /* 2. float을 해제하는 여러가지 방법들 */
+
+    ul {
+      overflow: hidden;
+    }
+
+    /* clear-fix */
+    ul::after {
+      /* inline요소라서 block 설정을 한 것 */
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    li {
+      float: left;
+      width: 300px;
+      height: 100px;
+      background: pink;
+    }
+
+
+    /* 1. float과 clear */
+    /* width를 설정하지 않으면 안보임(float 속성 때문) */
+    /* 
+    li:nth-child(2) {
+      width: 100%;
+      float: left;
+      height: 100px;
+      background: black;
+    } */
+
+    /* 형제 요소 중 float된 요소를 확인하고 싶으면 clear 속성 확인 */
+    /* li:nth-child(3) {
+
+      clear: left;
+    } */
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+
+</html>

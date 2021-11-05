@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수평정렬과 수직정렬</title>
+  <style>
+    body {
+      font-size: 0;
+    }
+
+    div {
+      /* inline 과 inline-block의 차이 */
+      /* display: inline; */
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background: pink;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- display: inline-block으로 margin 0인 상태로 아래를 출력하면 안녕하세요 사이에 간격이 생김(띄어쓰기를 공백으로 인식해서) -->
+  <!-- 그래서 수평정렬에서 inline-block을 설정하고 부모에 font-size:0px을 주면 해결 -->
+  <!-- 하지만 조금 귀찮으니 inline-block으로는 수평정렬을 잘 사용하지는 않음! -->
+
+  <div>안녕하세요</div>
+  <div>안녕하세요</div>
+  <div>안녕하세요</div>
+</body>
+
+</html>

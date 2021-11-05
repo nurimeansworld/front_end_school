@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float로 상자 만들어보기</title>
+  <style>
+    .wrap {
+      overflow: hidden;
+      width: 500px;
+      height: 500px;
+    }
+
+    .horizon {
+      width: 33%;
+      height: 60%;
+    }
+
+    .blue {
+      background: blue;
+      width: 100%;
+      height: 20%;
+    }
+
+
+    .green {
+      background: green;
+      float: left;
+      display: inline;
+    }
+
+    .red {
+      background: red;
+      float: left;
+      display: inline;
+    }
+
+    .plum {
+      background: plum;
+      float: left;
+      display: inline;
+    }
+
+    .yellow {
+      background: yellow;
+      position: relative;
+      top: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="blue"></div>
+    <div class="green horizon"></div>
+    <div class="red horizon"></div>
+    <div class="plum horizon"></div>
+    <div class="yellow"></div>
+  </div>
+</body>
+
+</html>

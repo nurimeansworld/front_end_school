@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sticky</title>
+  <style>
+    section {
+      height: 1000px;
+      border: 3px solid black;
+    }
+
+    h2 {
+      /* sticky는 나온지 얼마되지 않아 -webkit-sticky 속성 필요 */
+      position: -webkit-sticky;
+      position: sticky;
+      top: 30px;
+      background: greenyellow;
+    }
+
+    .wrap {
+      overflow: hidden;
+    }
+
+    p {
+      position: -webkit-sticky;
+      position: sticky;
+
+      width: 700px;
+      height: 100%;
+      top: 30px;
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>sticky test</h1>
+  <div class="wrap">
+    <p style="float: left;">sticky test</p>
+    <p style="float: rignt;">sticky test</p>
+  </div>
+
+  <section>
+    <h2>1. 오늘의 점심 메뉴</h2>
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas
+        vel sapiente ipsa aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium
+        earum autem rerum ex non temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro
+        maiores exercitationem illo debitis ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+
+    </ul>
+  </section>
+  <section>
+    <h2>2. 내일의 점심 메뉴</h2>
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas
+        vel sapiente ipsa aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium
+        earum autem rerum ex non temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro
+        maiores exercitationem illo debitis ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+
+    </ul>
+  </section>
+  <section>
+    <h2>3. 오늘의 저녁 메뉴</h2>
+    <ul>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas
+        vel sapiente ipsa aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium
+        earum autem rerum ex non temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro
+        maiores exercitationem illo debitis ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, eaque sequi? Quo aliquid dolores non minima
+        doloremque laudantium, quam soluta nesciunt? Quo voluptatem eius placeat! Nisi culpa autem asperiores excepturi
+        amet
+        qui quisquam. Vitae incidunt amet voluptatum quia doloremque ipsum, omnis consequuntur ipsam ullam eius
+        quibusdam
+        ducimus nobis et saepe maxime dolorum nisi porro debitis non nulla accusamus iste? Repellendus quas vel sapiente
+        ipsa
+        aut a nobis culpa quae accusamus blanditiis odit, error voluptatibus perspiciatis laudantium earum autem rerum
+        ex non
+        temporibus explicabo. Iusto et consectetur recusandae obcaecati repellendus porro maiores exercitationem illo
+        debitis
+        ratione excepturi voluptates, quis eum laboriosam!
+      </li>
+
+    </ul>
+  </section>
+</body>
+
+</html>

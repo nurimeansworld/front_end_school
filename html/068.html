@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 실습 해보기 - 네이버 로그인</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <style>
+    .container {
+      width: 450px;
+      background: #f7f9fa;
+      border: 2px solid #dae1e6;
+      padding: 10px 20px;
+    }
+
+    p {
+      color: gray;
+    }
+
+    .btn-login {
+      display: block;
+      width: 100%;
+      /* width: 300px; */
+      background: #19ce60;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+
+    .btn-login::before {
+      /* content: url('images/title.png'); */
+      content: '';
+      background-image: url('images/title.png');
+      width: 10px;
+    }
+
+    .btn-wrap {
+      padding: 15px 0;
+    }
+
+    .btn-wrap a {
+      text-align: center;
+      font-size: 14px;
+      color: #404040;
+      text-decoration: none;
+    }
+
+    .btn-left {
+      float: left;
+    }
+
+    .btn-left::before {
+      /* content: url('images/lock.png'); */
+      content: '';
+      /* width, height 설정은 필수!! */
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background-image: url("images/lock.png");
+      background-size: contain;
+      /* background-repeat: no-repeat; */
+
+    }
+
+    .btn-right {
+      float: right;
+    }
+
+    .btn-right::before {
+      content: '';
+      background-image: url('images/user.png');
+      width: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <article class="container">
+    <h2 style="display:none; ">로그인</h2>
+    <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+    <a href="#" class="btn-login">로그인</a>
+    <div class="btn-wrap">
+      <div class="btn-left">
+        <a href="">아이디</a>
+        <a href="">비밀번호찾기</a>
+      </div>
+      <a href="" class="btn-right">회원가입</a>
+    </div>
+  </article>
+</body>
+
+</html>

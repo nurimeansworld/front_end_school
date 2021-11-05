@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    /*code base*/
+
+    body {
+      font-family: sans-serif;
+      box-sizing: border-box;
+      font-weight: 600;
+    }
+
+    .container {
+      background: #f9f1f0;
+      border: 2px solid black;
+      display: flex;
+
+      /* flex-direction: row; */
+      /* flex-direction: column; */
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column-reverse; */
+
+      /* 위에 flex-direction에서 설정한 축(axis)을 기준으로 아래 설정 */
+      /* justify-content: flex-start; */
+      /* justify-content: flex-end; */
+      /* justify-content: center; */
+      /* justify-content: space-between; */
+
+      /* around는 양쪽이 똑같아서 중간이 넓어지는데 */
+      justify-content: space-around;
+      /* evenly는 정말 사이 여백이 균등하다.. */
+      /* justify-content: space-evenly; */
+
+
+      width: 700px;
+      height: 500px;
+    }
+
+
+    .box {
+      background-color: pink;
+      border: 2px solid black;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    /* 내가 추가) flex가 없던 시절 수직 정렬 */
+    /* .box1 {
+      position: relative;
+    } */
+
+    /* .box2 {
+      height: 100px;
+      width: 50px;
+      background-color: pink; */
+
+    /* 수직 정렬 */
+    /* position: absolute;
+      top: 50%;
+      margin-top: 50px; */
+
+    /* 혹은 */
+    /* position: absolute;
+      height: 100px;
+      top: 50%;
+      transform: translateY(-50); */
+
+    /* 수평 정렬은 */
+    /* margin: 0 auto; */
+    /* } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box">box3</div>
+  </div>
+</body>
+
+</html>
