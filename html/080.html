@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid - </title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <style>
+    .container {
+      display: grid;
+      height: 100vh;
+
+      /* grid-template-columns: 100px 100px 100px; */
+
+      /* fr 은 grid에서만 사용되는 비율 단위 */
+      grid-template-columns: 1fr 1fr 1fr;
+      /* 위와 같은 설정 */
+      /* grid-template-columns: repeat(3, 1fr); */
+      /* grid-template-rows: 1fr 1fr 1fr; */
+
+      gap: 10px 20px;
+      /* grid-template-columns: 에서 fr이 아닌 %로 나누게 된다면 gap의 범위를 고려하지 않아 스크롤이 생기는 상황이 있음! */
+    }
+
+    [class^="item"] {
+      background: pink;
+      border: 1px solid black;
+    }
+
+    .item1 {
+      /* 약간 colspan rowspan 같은걸까 */
+
+      grid-column-start: 1;
+      grid-column-end: 3;
+      /* 위와 같은 표현 */
+      /* grid-column: 1 / 3; */
+      /* gird-column: 1 / span 2 */
+
+      grid-row-start: 1;
+      grid-row-end: 2;
+      /* grid-row: 1 / 2; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+</body>
+
+</html>

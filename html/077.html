@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex - flex-basis</title>
+  <style>
+    .container {
+      display: flex;
+      /* flex-direction: column; */
+    }
+
+    .item {
+      background: pink;
+      /* item에 주는 값 */
+      /* 현재는 width가 100px인데 flex-direction: column을 하면 방향이 바뀌어서 height가 100px가 된다 */
+      flex-basis: 100px;
+
+      flex-grow: 1;
+    }
+
+    .second {
+      /* flex-grow: 2; */
+
+      flex-grow: 0;
+      flex-shrink: 0;
+
+
+      /* 아래처럼 축약으로 사용 가능 */
+      /* flex: flex-grow, flex-shrink, flex-basis */
+      flex: 1;
+      /* flex-grow:1; flex-shrink:1; flex-basis:0; */
+      flex: 1 1 300px;
+      /* flex-grow:1; flex-shrink:1; flex-basis:300px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nobis alias quo eum corporis,
+      fuga voluptas rem quaerat, placeat sint libero? Hic non maiores fugiat, deleniti vel impedit quod! Pariatur!</div>
+    <div class="item second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio facere odio est aliquid
+      itaque,
+      vero deserunt voluptatibus quia deleniti quibusdam. Ratione accusamus est aut enim, temporibus facilis adipisci
+      nulla praesentium?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nobis alias quo eum corporis,
+      fuga voluptas rem quaerat, placeat sint libero? Hic non maiores fugiat, deleniti vel impedit quod! Pariatur!</div>
+  </div>
+</body>
+
+</html>

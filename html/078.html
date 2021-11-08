@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex - align-self, order</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <style>
+    ul {
+      height: 100px;
+      display: flex;
+      /* align-items: flex-end; */
+    }
+
+    li {
+      width: 50px;
+      height: 50px;
+      background: pink;
+      border: 1px solid black;
+    }
+
+    .first {
+      order: 1;
+    }
+
+    .second {
+      order: 1;
+    }
+
+    .third {
+      order: 1;
+    }
+
+    .forth {
+      order: 1;
+    }
+
+    .fifth {
+      /* 부모의 flex 속성을 덮어 씌운다 */
+      /* align-self: flex-start; */
+
+      order: 1;
+      /* order는 절대적인 순서가 아닌 우선순위 */
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="first">1</li>
+    <li class="secont">2</li>
+    <li class="third">3</li>
+    <li class="forth">4</li>
+    <li class="fifth">5</li>
+  </ul>
+</body>
+
+</html>
