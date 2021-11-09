@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>perspective</title>
+  <style>
+    .원본 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      margin: 100px auto;
+      perspective: 200px;
+    }
+
+    .회전패널1 {
+      width: 200px;
+      height: 200px;
+      background: darkred;
+
+      /* transform: rotate(45deg); */
+      /* transform: rotateX(45deg); */
+      transform: rotateY(45deg);
+    }
+
+    .회전패널2 {
+      width: 200px;
+      height: 200px;
+      background: darkred;
+
+      transform: rotateX(90deg);
+      /* transform: rotateY(180deg); */
+
+    }
+
+    .회전패널3 {
+      width: 200px;
+      height: 200px;
+      background: darkred;
+
+      transform: rotateY(-45deg);
+    }
+
+    .회전패널4 {
+      width: 200px;
+      height: 200px;
+      background: darkred;
+      transform: rotateY(-90deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="원본">
+    <div class="회전패널1"></div>
+    <div class="회전패널2"></div>
+    <div class="회전패널3"></div>
+    <div class="회전패널4"></div>
+  </div>
+</body>
+
+</html>

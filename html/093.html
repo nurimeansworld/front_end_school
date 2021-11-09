@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>keyframe 빌딩 세우기</title>
+  <style>
+    @keyframes buildUP {
+      from {
+        background-position: 0px, 0px;
+      }
+
+      to {
+        /* background-position: -3730px, 0; */
+        background-position: -8730px, 0;
+      }
+    }
+
+    .building1 {
+      /* width: 110px;
+      height: 180px;
+      background: url(building/building8.png) no-repeat;
+      animation: buildUP 5s steps(33); */
+
+      width: 180px;
+      height: 300px;
+      background: url(building/building8.png) no-repeat;
+      animation: buildUP 3s steps(42);
+
+      /* 마지막 이미지에서 stop */
+      animation-fill-mode: forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="building1"></div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation-direction</title>
+  <style>
+    @keyframes moveAround {
+      0% {
+        transform: translate(0px, 0px);
+      }
+
+      33% {
+        transform: translate(300px, 0px);
+      }
+
+      66% {
+        transform: translate(300px, 300px);
+      }
+
+      100% {
+        transform: translate(0px, 300px);
+      }
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: plum;
+
+      animation: moveAround 3s infinite;
+      animation-direction: alternate;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
