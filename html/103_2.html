@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media query 2</title>
+  <style>
+    body {
+      background: tomato;
+    }
+
+    /* 601px ~ 1000px까지 */
+    @media screen and (max-width:1000px) {
+      body {
+        background: green;
+      }
+    }
+
+    /* 0 ~ 600px까지 */
+    @media screen and (max-width:600px) {
+      body {
+        background: violet;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>hello world</h1>
+</body>
+
+</html>
