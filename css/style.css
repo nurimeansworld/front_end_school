@@ -1,0 +1,166 @@
+/* font */
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+#app {
+  padding-bottom: 70px;
+  font-family: GmarketSansMedium;
+  background-color: #5b2386;
+  color: white;
+  text-align: center;
+}
+.tit-law {
+  /* .img-tit와 마진겹침으로 인해 display 설정 */
+  display: inline-block;
+  margin-top: 194px;
+  /* 이미지 가운데에 두기 위해 */
+  position: relative;
+}
+.tit-law::after {
+  /* 가상요소니까 content, display 설정 */
+  content: "";
+  display: block;
+  position: absolute;
+
+  /* 가운데 정렬? */
+  top: 50%;
+  left: 50%;
+  width: 225px;
+  height: 225px;
+  margin: -112px 0 0 -112px;
+  background-image: url(../html/images-law/title_bg.png);
+  /* 이미지가 잘리지 않기 위해 */
+  background-size: 225px;
+}
+.tit-law .img-tit {
+  position: relative;
+  z-index: 10;
+}
+.img-txt {
+  max-width: 486px;
+  margin: 125px auto 78px;
+}
+
+.txt-desc {
+  line-height: 24px;
+  font-size: 18px;
+
+  position: relative;
+
+  /* 양 끝에 있는 따옴표를 가운데로 모으기 위해 */
+  width: 475px;
+  margin: 0 auto 102px;
+}
+.txt-desc .tit-desc {
+  font-size: 24px;
+  font-weight: bold;
+}
+.txt-desc::before,
+.txt-desc::after {
+  /* 좌측, 우측 정렬 */
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+
+  display: block;
+  content: "";
+  width: 37px;
+  height: 32px;
+}
+.txt-desc::before {
+  /* 좌측 정렬 */
+  left: 0;
+  background-image: url(../html/images-law/txt-left.png);
+}
+.txt-desc::after {
+  /* 우측 정렬 */
+  right: 0;
+  background-image: url(../html/images-law/txt-right.png);
+}
+
+.cont-inp {
+  font-size: 24px;
+  line-height: 24px;
+}
+.cont-inp .txt-wannabe input,
+.cont-inp .txt-time input {
+  max-width: 228px;
+  height: 57px;
+  border: none;
+  border-radius: 7px;
+
+  text-align: center;
+  font-size: 24px;
+  color: #babcbe;
+
+  margin: 0 17px 27px;
+}
+
+.cont-inp .btn-exc,
+.cont-result .btn-go,
+.cont-result .btn-share {
+  margin: 115px auto 147px;
+  padding: 21px 49px;
+
+  font-family: GmarketSansBold;
+  background: #fcee21;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 56px;
+  font-size: 24px;
+  color: #5b2386;
+  cursor: pointer;
+}
+
+.cont-inp .btn-exc::after {
+  display: block;
+  content: "";
+  background-image: url(../html/images-law/hand.png);
+  width: 64px;
+}
+.cont-result {
+  font-size: 24px;
+  line-height: 72px;
+}
+.cont-result .txt-wannabe strong,
+.cont-result .txt-time strong {
+  font-family: GmarketSansBold;
+  font-size: 72px;
+}
+.cont-result .btn-share {
+  margin-left: 18px;
+  background: #fff;
+}
+.cont-footer {
+  font-size: 12px;
+  line-height: 17px;
+}
+.cont-footer .img-footer {
+  width: 125px;
+  margin: 0 auto 20px;
+}

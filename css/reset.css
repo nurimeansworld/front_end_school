@@ -66,23 +66,16 @@ th,
 td,
 article,
 aside,
-canvas,
-details,
-embed,
 figure,
 figcaption,
 footer,
 header,
-hgroup,
 menu,
 nav,
 output,
 ruby,
 section,
-summary,
 time,
-mark,
-audio,
 video {
   margin: 0;
   padding: 0;
@@ -102,7 +95,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+main {
   display: block;
 }
 body {
@@ -126,4 +120,19 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/* utility */
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 }
