@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 설계 기법</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    /* OOCSS (Object Oriented CSS) */
+    /* 1. 구조와 스킨 : btn1 과 btn2 구조 변경 */
+    /* .btn1 {
+      width: 200px;
+      height: 80px;
+      font-size: 30px;
+    }
+
+    .btn2 {
+      width: 200px;
+      height: 80px;
+      font-size: 30px;
+      background: black;
+      color: #fff;
+      border: 3px dotted #fff;
+    } */
+
+    /* .btn {
+      width: 200px;
+      height: 80px;
+      font-size: 30px;
+    }
+
+    .btn-close {
+      background: black;
+      color: #fff;
+      border: 3px dotted #fff;
+    } */
+
+    /* 2. 컨테이너와 콘텐츠(스트럭처와 모듈) */
+    /* #main .classname1{ } 이런식 말고
+    .classname1 { } 이런식으로 */
+
+    /* SMACSS (Scalable and Modular Architecture for CSS)  */
+    /* 3. smacss : 3) 모듈 */
+    /* .btn {
+      display: inline-block;
+      width: 300px;
+      padding: 20px 10px;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      background: brown;
+    }
+
+    .btn.btn-small {
+      width: 80px;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .btn.btn-long {
+      width: 160px;
+    } */
+
+    /* 3. smacss : 4) 스테이트 */
+    /* .tabnav {
+      display: flex;
+    }
+
+    .tabnav li {
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    .tabnav li:first-child {
+      border: 1px solid black;
+    }
+
+    .tabnav li a {
+      display: block;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    .is-active {
+      background: blanchedalmond;
+    }
+
+    .is-active a {
+      pointer-events: none;
+      color: red;
+    } */
+
+    /* 3. smacss : 5) 테마 */
+    /* 위가 모듈이라면 아래는 테마*/
+    /* .mod {
+      border: 1px solid;
+    }
+
+    .mod {
+      border-color: blue;
+    } */
+
+    /* BEM (Block, Element, Modifier) */
+    /* 4. BEM */
+  </style>
+</head>
+
+<body>
+  <!-- 1. 구조와 스킨 : btn1 과 btn2 구조 변경 -->
+  <!-- <button type="button" class="btn1"></button>
+  <button type="button" class="btn2"></button> -->
+
+
+  <!-- 2. 컨테이너와 콘텐츠(스트럭처와 모듈) -->
+
+  <!-- 3. smacss : 3) 모듈 -->
+  <!-- <a href="" class="btn btn-small btn-long">아이디/비밀번호 찾기</a>
+  <a href="" class="btn btn-small">로그인</a> -->
+
+  <!-- 3. smacss : 4) 스테이트 -->
+  <!-- <ul class="tabnav">
+    <li class="is-active"><a href="">탭1</a></li>
+    <li><a href="">탭2</a></li>
+    <li><a href="">탭3</a></li>
+    <li><a href="">탭4</a></li>
+  </ul> -->
+
+  <!-- 4. BEM -->
+  <!-- block : chapter-baseball
+  element : chapter-baseball__btn
+  modifier : chapter-baseball__active-false -->
+  <section class="chapter-baseball">
+    <button type="button" class="chapter-baseball__btn">button</button>
+    <button type="button" class="chapter-baseball__active-false">button</button>
+  </section>
+
+</body>
+
+</html>
