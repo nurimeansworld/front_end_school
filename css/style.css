@@ -55,7 +55,9 @@
   margin: -112px 0 0 -112px;
   background-image: url(../html/images-law/title_bg.png);
   /* 이미지가 잘리지 않기 위해 */
-  background-size: 225px;
+  /* background-size: 225px; */
+
+  background-position: center;
 }
 .tit-law .img-tit {
   position: relative;
@@ -67,14 +69,14 @@
 }
 
 .txt-desc {
-  line-height: 24px;
+  line-height: 30px;
   font-size: 18px;
 
   position: relative;
 
   /* 양 끝에 있는 따옴표를 가운데로 모으기 위해 */
   width: 475px;
-  margin: 0 auto 102px;
+  margin: 0 auto 96px;
 }
 .txt-desc .tit-desc {
   font-size: 24px;
@@ -124,7 +126,7 @@
 .cont-inp .btn-exc,
 .cont-result .btn-go,
 .cont-result .btn-share {
-  margin: 115px auto 147px;
+  margin: 80px auto 147px;
   padding: 21px 49px;
 
   font-family: GmarketSansBold;
@@ -139,9 +141,13 @@
 
 .cont-inp .btn-exc::after {
   display: block;
+  position: absolute;
+  right: -80px;
+  bottom: -20px;
   content: "";
-  background-image: url(../html/images-law/hand.png);
   width: 64px;
+  height: 72px;
+  background-image: url("../images-law/hand.png");
 }
 .cont-result {
   font-size: 24px;
