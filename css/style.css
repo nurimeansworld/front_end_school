@@ -170,3 +170,113 @@
   width: 125px;
   margin: 0 auto 20px;
 }
+
+/* mobile */
+@media screen and (max-width: 360px) {
+  #app {
+    padding: 0 24px 32px;
+  }
+  .tit-law {
+    width: 267px;
+    height: 57px;
+    margin-top: 76px;
+  }
+  .tit-law::after {
+    width: 106px;
+    height: 106px;
+    margin: -53px 0 0 -53px;
+    background-size: 106px;
+  }
+
+  .img-txt {
+    max-width: 297px;
+  }
+  .txt-desc {
+    margin-bottom: 62px;
+    font-size: 14px;
+  }
+  .txt-desc .tit-desc {
+    font-size: 16px;
+  }
+  .txt-desc::before,
+  .txt-desc::after {
+    width: 18px;
+    height: 15px;
+    background-size: 18px 15px;
+  }
+  .cont-inp,
+  .cont-result {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .cont-inp .txt-wannabe input,
+  .cont-inp .txt-time input {
+    width: 156px;
+    height: 37px;
+    font-size: 14px;
+    margin: 0 2px;
+    padding: 0;
+  }
+  .cont-inp .txt-wannabe {
+    margin-bottom: 17px;
+  }
+  .cont-inp .txt-time input {
+    margin-top: 17px;
+  }
+  .cont-inp .btn-exc {
+    width: 280px;
+    padding: 19px 36px;
+    font-size: 17px;
+    line-height: 17px;
+    border-radius: 13px;
+  }
+  .cont-inp .btn-exc::after {
+    width: 43px;
+    height: 48px;
+    background-size: 43px 48px;
+    right: -40px;
+    top: 30px;
+  }
+  .cont-result .txt-wannabe strong,
+  .cont-result .txt-time strong {
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -4px;
+  }
+  .cont-result .txt-wannabe,
+  .cont-result .txt-time {
+    line-height: 14px;
+  }
+  .cont-inp .btn-exc,
+  .btn-go,
+  .btn-share {
+    font-size: 14px;
+    padding: 12px 17px;
+  }
+  .btn-share {
+    margin-left: 14px;
+  }
+  .cont-footer .img-footer {
+    width: 91px;
+    height: 18px;
+  }
+  .cont-footer {
+    font-size: 9px;
+  }
+  .img-txt {
+    margin: 69px auto 62px;
+  }
+  .cont-inp .txt-time {
+    margin-bottom: 49px;
+  }
+  .cont-inp .btn-exc {
+    margin-bottom: 64px;
+    padding: 12px 54px;
+  }
+  .cont-result .txt-time {
+    margin-bottom: 55px;
+  }
+  .cont-result {
+    margin-bottom: 83px;
+  }
+}
