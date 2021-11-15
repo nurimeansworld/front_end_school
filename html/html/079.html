@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!-- 강사의 네이버 코드 -->
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>네이버 로그인</title>
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <style>
     .cont {
       width: 350px;
@@ -52,7 +51,8 @@
     }
 
     .find {
-      float: left;
+      /* float: left; */
+      display: flex;
     }
 
     .find img {
@@ -62,7 +62,7 @@
 
     .find img,
     .find a {
-      float: left;
+      /* float: left; */
     }
 
     .find a {
@@ -90,7 +90,7 @@
     }
 
     .join {
-      float: right;
+      /* float: right; */
     }
 
     .join img {
@@ -99,23 +99,30 @@
       /* 상하 정렬을 조정해줍니다. 오직 inline, inline-block 요소에서만 작동합니다. */
       vertical-align: -1px;
     }
+
+    .list-util {
+      display: flex;
+      justify-content: space-between;
+    }
   </style>
 </head>
 
 <body>
-  <div class="cont">
+  <article class="cont">
     <p>네이버를 더 안전하고 편리하게 이용하세요</p>
-    <a href="" class="link-login"><img src="images/title.png" alt="네이버">로그인</a>
-    <div class="find">
-      <img src="images/lock.png" alt="">
-      <a href="" class="link-find">아이디</a>
-      <a href="">비밀번호찾기</a>
-    </div>
-    <div class="join">
-      <img src="images/user.png" alt="">
-      <a href="">회원가입</a>
-    </div>
-  </div>
+    <a href="" class="link-login"><img src="../images/title.png" alt="네이버">로그인</a>
+    <ul class="list-util">
+      <li class="find">
+        <img src="../images/lock.png" alt="">
+        <a href="" class="link-find">아이디</a>
+        <a href="">비밀번호찾기</a>
+      </li>
+      <li class="join">
+        <img src="../images/user.png" alt="">
+        <a href="">회원가입</a>
+      </li>
+    </ul>
+  </article>
 </body>
 
 </html>
