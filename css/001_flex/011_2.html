@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card 2</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: cornsilk;
+      border: solid 3px black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      background-color: darkcyan;
+      border: solid 3px black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    /* .item-img {
+      flex: 1;
+    } */
+
+    .item-desc {
+      /* flex: auto; */
+      background: cornsilk;
+      padding: 10px;
+    }
+
+    @media screen and (max-width:1330px) {
+      .item {
+        width: 500px;
+      }
+    }
+
+    @media screen and (max-width:1110px) {
+      .item {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="container">
+    <li class="item">
+      <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+      <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum hic
+        recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem reprehenderit,
+        qui in itaque unde odit eveniet.</p>
+    </li>
+    <li class="item">
+      <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+      <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum hic
+        recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem reprehenderit,
+        qui in itaque unde odit eveniet.</p>
+    </li>
+    <li class="item">
+      <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+      <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum hic
+        recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem reprehenderit,
+        qui in itaque unde odit eveniet.</p>
+    </li>
+    <li class="item">
+      <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+      <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum hic
+        recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem reprehenderit,
+        qui in itaque unde odit eveniet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eveniet animi
+        obcaecati consectetur ducimus mollitia dolore repellendus ab! Aliquam quod ab eligendi perferendis voluptatum
+        minima doloribus ex nemo autem alias.
+        Exercitationem aliquid est voluptate aut? Excepturi modi, corrupti provident facere nobis consectetur
+        repellendus atque velit quibusdam exercitationem distinctio quae labore veniam eligendi rem quia id repellat,
+        architecto, tempore dolorum totam?
+        Magnam tempora tempore modi ullam recusandae iure voluptatum at consequatur? Sit architecto ex pariatur
+        laudantium incidunt, neque aspernatur cumque? Ipsam saepe tempora fugit corrupti quisquam dolorum quia vero
+        harum optio!</p>
+    </li>
+  </ul>
+</body>
+
+</html>

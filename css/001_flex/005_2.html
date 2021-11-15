@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴만들기 2</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .container-color {
+      background: cornsilk;
+      border: 3px solid black;
+      border-radius: 10px;
+      height: 75px;
+      padding: 5px;
+
+    }
+
+    .item-color {
+      background: darkcyan;
+      border: 3px solid black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+
+    }
+
+    .container {
+      display: flex;
+      /* flex-direction: column; */
+    }
+
+    .item {
+      width: 20%;
+      text-align: center;
+      color: white;
+      font-size: 1.2em;
+      font-weight: 700;
+      line-height: 2.5em;
+      transition: all .5s;
+    }
+
+    .logo {
+      flex: 5;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 700;
+      line-height: 2.5em;
+      transition: all .5s;
+    }
+
+    .item:hover {
+      flex: 1.5;
+      background: tomato;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <pre>
+      /* Keyword values */
+      flex: auto;
+      flex: initial;
+      flex: none;
+
+      /* One value, unitless number: flex-grow */
+      flex: 2;
+
+      /* One value, length or percentage: flex-basis */
+      flex: 10em;
+      flex: 30%;
+
+      /* Two values: flex-grow | flex-basis */
+      flex: 1 30px;
+
+      /* Two values: flex-grow | flex-shrink */
+      flex: 2 2;
+
+      /* Three values: flex-grow | flex-shrink | flex-basis */
+      flex: 2 2 10%;
+
+      /* Global values */
+      flex: inherit;
+      flex: initial;
+      flex: unset;
+  </pre>
+  <ul class="container-color container">
+    <li class="item-color logo">LOGO</li>
+    <li class="item-color item">ABOUT ME</li>
+    <li class="item-color item">SKILL</li>
+    <li class="item-color item">PORTFOLIO</li>
+    <li class="item-color item">CONTACT</li>
+  </ul>
+</body>
+
+</html>

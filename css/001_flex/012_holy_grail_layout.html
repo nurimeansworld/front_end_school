@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>holy grail layout</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    /* reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* style */
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      border: 10px solid black;
+    }
+
+    .item {
+      border: 10px solid brown;
+    }
+
+    .item:nth-child(1) {
+      border: 10px solid darkgreen;
+      width: 100%;
+    }
+
+    .item:nth-child(2) {
+      border: 10px solid tomato;
+      width: 70%;
+    }
+
+    .item:nth-child(3) {
+      border: 10px solid tomato;
+      width: 30%;
+    }
+
+    .item:nth-child(4) {
+      border: 10px solid deeppink;
+      width: 100%;
+
+    }
+
+    @media screen and (max-width:800px) {
+
+      .item:nth-child(2),
+      .item:nth-child(3) {
+        width: 100%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="item">
+    <h1>제목1</h1>
+    <nav>
+      <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+      </ul>
+    </nav>
+  </header>
+  <!-- //header -->
+
+  <section class="item">
+    <h2>제목2</h2>
+    <article>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error a ab assumenda inventore voluptatum consequuntur,
+      voluptatibus officiis sequi facilis minus eaque ea nesciunt. Amet, quia. Eum quod atque omnis voluptatum.
+      Qui eum vitae necessitatibus. Amet velit minima quaerat aliquid. Recusandae labore autem perspiciatis quaerat,
+      repudiandae repellat, enim totam, minima iste nostrum perferendis corporis voluptate dolore similique quia debitis
+      fugit at.
+      Omnis cumque, nam nesciunt modi nulla officiis. Ratione cupiditate ipsum quas aut ut vel nam beatae debitis
+      possimus rem minus facere doloribus dolorem eveniet dolor, alias quae! Possimus, nulla ut?
+      Ea illo tenetur perferendis facere, quasi ut, quos in, sed molestias dolor dicta! Error provident perferendis,
+      distinctio sed laudantium iste ad aliquid exercitationem incidunt ipsam illo nostrum est natus accusamus.
+    </article>
+  </section>
+  <aside class="item">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat quasi soluta facilis repudiandae molestias
+    voluptatum provident officia nemo, veritatis dolor nisi perferendis dolore tenetur quaerat placeat asperiores esse
+    dolorum!
+  </aside>
+  <!-- footer -->
+  <footer class="item">
+    footr
+  </footer>
+  <!-- //footer -->
+</body>
+
+</html>

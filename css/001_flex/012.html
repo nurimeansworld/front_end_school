@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>holy grail layout</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ccc;
+    }
+
+    .logo {
+      margin-right: auto;
+      background: rgb(0, 0, 0, 30%);
+      /* border-radius: 20px; */
+      text-align: center;
+      font-size: 20px;
+
+    }
+
+    .logo a {
+      color: #fff;
+    }
+
+    .sec-menu {
+      width: 100%;
+      min-height: 100px;
+      text-align: center;
+    }
+
+    .list-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      /* justify-content: center; */
+
+      /* border: solid 3px black; */
+      border-radius: 10px;
+      /* margin: 5px; */
+      padding: 5px;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      font-size: 20px;
+      background: #FADCD9;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      /* border: solid 3px black; */
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 2em;
+    }
+
+    .submenu {
+      display: none;
+    }
+
+    .sec-main {
+      display: flex;
+    }
+
+    .list-item {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .item {
+      background: #FADCD9;
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+      line-height: 2em;
+    }
+
+    .item-desc {
+      /* flex: auto; */
+      background: cornsilk;
+      /* padding: 10px; */
+    }
+
+
+    .banner-side {
+      width: 200px;
+    }
+
+    /* @media screen and (max-width:1330px) {
+      .item {
+        width: 500px;
+      }
+    }
+
+    @media screen and (max-width:1110px) {
+      .item {
+        width: 80%;
+      }
+    } */
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <!-- logo -->
+    <h1 class="logo"></h1>
+    <!-- menu -->
+    <nav class="sec-menu">
+      <ul class="list-menu">
+        <li class="menu logo">
+          <a href="#">HOME</a>
+        </li>
+        <li class="menu">
+          <a href="#">MENU 1</a>
+        </li>
+        <li class="menu">
+          <a href="#">MENU 2</a>
+        </li>
+        <li class="menu has-submenu">
+          <a href="#">MENU 3</a>
+          <ul class="submenu">
+            <li class="submenu">
+              <a href="#">SUBMENU 1</a>
+            </li>
+            <li class="submenu">
+              <a href="#">SUBMENU 2</a>
+            </li>
+            <li class="submenu">
+              <a href="#">SUBMENU 3</a>
+            </li>
+            <li class="submenu">
+              <a href="#">SUBMENU 4</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="#">MENU 4</a>
+        </li>
+        <!-- mobile menu icon -->
+        <li class="icon">
+          <a href="#"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- //menu -->
+  </header>
+
+  <main id="main" class="sec-main">
+    <section class="container">
+      <ul class="list-item">
+        <li class="item">
+          <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+          <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum
+            hic
+            recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem
+            reprehenderit,
+            qui in itaque unde odit eveniet.</p>
+        </li>
+        <li class="item">
+          <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+          <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum
+            hic
+            recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem
+            reprehenderit,
+            qui in itaque unde odit eveniet.</p>
+        </li>
+        <li class="item">
+          <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+          <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum
+            hic
+            recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem
+            reprehenderit,
+            qui in itaque unde odit eveniet.</p>
+        </li>
+        <li class="item">
+          <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+          <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum
+            hic
+            recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem
+            reprehenderit,
+            qui in itaque unde odit eveniet.</p>
+        </li>
+        <li class="item">
+          <img src="../image/a.jpg" alt="테스트용 이미지 입니다." class="item-img">
+          <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius asperiores, ipsum
+            hic
+            recusandae inventore eum laboriosam laudantium totam accusantium. Possimus adipisci voluptatem
+            reprehenderit,
+            qui in itaque unde odit eveniet.</p>
+        </li>
+      </ul>
+    </section>
+    <aside class="banner-side">
+      <img src="../image/a.jpg" alt="배너 이미지입니다.">
+    </aside>
+  </main>
+  <footer>
+    <p><b>(주)유니브</b> | <b>대표</b> 이호준 | <b>사업자번호</b> 546-86-017357 | 정보통신업 | <b>주소</b> 제주도 제주시 수목원길 39-1, 1층</p>
+    <p>&copy; Weniv Corp.</p>
+  </footer>
+</body>
+
+</html>

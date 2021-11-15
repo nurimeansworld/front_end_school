@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex - 4</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .container-color {
+      background: cornsilk;
+      border: 3px solid black;
+      border-radius: 10px;
+      height: 300px;
+      margin: 5px;
+      padding: 5px;
+
+    }
+
+    .item-color {
+      background: darkcyan;
+      border: 3px solid black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+
+    }
+
+    .container1 {
+      display: flex;
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+      flex-direction: row;
+      /* flex-direction: row-reverse; */
+    }
+
+    .item {
+      flex-grow: 1;
+    }
+
+    .item:nth-child(1) {
+      flex-basis: 500px;
+      flex-shrink: 0;
+    }
+
+    .item:nth-child(2) {
+      flex-basis: 500px;
+      flex-shrink: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <p>flex-shrink : 크기 축소 비율?</p>
+  <div class="container-color container1">
+    <div class="item-color item">Lorem.</div>
+    <div class="item-color item">Lorem, ipsum.</div>
+    <div class="item-color item">Lorem, ipsum dolor.</div>
+    <div class="item-color item">Lorem ipsum dolor sit.</div>
+  </div>
+</body>
+
+</html>

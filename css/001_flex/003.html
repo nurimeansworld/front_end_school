@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex - 3</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .container-color {
+      background: cornsilk;
+      border: 3px solid black;
+      border-radius: 10px;
+      height: 300px;
+      margin: 5px;
+      padding: 5px;
+
+    }
+
+    .item-color {
+      background: darkcyan;
+      border: 3px solid black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+
+    }
+
+    .container1 {
+      display: flex;
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+      flex-direction: row;
+      /* flex-direction: row-reverse; */
+    }
+
+    .item {
+      flex-grow: 1;
+    }
+
+    .item:nth-child(2) {
+      flex-grow: 5;
+    }
+  </style>
+</head>
+
+<body>
+  <p>flex-grow : 전체의 비율</p>
+  <div class="container-color container1">
+    <div class="item-color item">1</div>
+    <div class="item-color item">5</div>
+    <div class="item-color item">1</div>
+    <div class="item-color item">1</div>
+  </div>
+</body>
+
+</html>

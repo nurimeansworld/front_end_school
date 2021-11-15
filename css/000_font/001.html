@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>font - @로 적용하기</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    /* 1. atruels(@)로 적용하기  */
+    @font-face {
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    :root {
+      --main-font: GmarketSansLight;
+    }
+
+    p {
+      font-family: var(--main-font);
+    }
+  </style>
+
+  <!-- 2. 웹폰트 링크로 적용하기 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    p {
+      font-family: 'Nanum Pen Script', cursive;
+      ;
+    }
+  </style>
+
+  <!-- 3. 다운로드 받은 폰트 파일로 적용하기 -->
+  <style>
+    /* format 에는
+      - truetype(인쇄글꼴과 화면글꼴이 같음)
+      - eot (embeded-open-type, 익스플로러 8 이하)
+      - woff (익스플로러 9 이상)
+      등이 있음 */
+
+    @font-face {
+      font-family: 'Gm';
+      src: url(font_file/GmarketSansTTF/GmarketSansTTFLight.ttf) format('truetype');
+    }
+
+    p {
+      font-family: 'Gm';
+      ;
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- 1. atruels(@)로 적용하기 -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ullam. Maiores nemo dignissimos assumenda sed iusto
+    necessitatibus, sit, illum similique modi, iure officia ipsam soluta veritatis non. Veniam, quae porro.
+  </p>
+
+</body>
+
+</html>
