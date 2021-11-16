@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gird - 2(grid-template-areas)</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container-color {
+      background-color: cornsilk;
+      border: solid 3px black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .item-color {
+      background-color: darkcyan;
+      border: solid 3px black;
+      border-radius: 10px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .container {
+      display: grid;
+
+      /* 2. grid-template-areas */
+      gap: 10px;
+      /* 위에 3개를 header로 쓰겠다 */
+      grid-template-areas: 'header   header   header'
+        'section  section  aside'
+        'footer   footer   footer';
+    }
+
+    /* 
+        그리드 트랙 : 행 또는 열
+        그리드 셀 : 한 칸
+        그리드 라인 : 셀 구분 선
+    */
+
+    .header {
+      border: 10px solid tomato;
+      grid-area: header;
+    }
+
+    .section {
+      border: 10px solid blue;
+      grid-area: section;
+    }
+
+    .aside {
+      border: 10px solid darkred;
+      grid-area: aside;
+    }
+
+    .footer {
+      border: 10px solid deeppink;
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body>
+  <p>display: gird;</p>
+  <div class="container-color container">
+    <div class="item-color item header">Lorem.</div>
+    <div class="item-color item section">Lorem, ipsum.</div>
+    <div class="item-color item aside">Lorem, ipsum dolor.</div>
+    <div class="item-color item footer">Lorem ipsum dolor sit.</div>
+  </div>
+</body>
+
+</html>

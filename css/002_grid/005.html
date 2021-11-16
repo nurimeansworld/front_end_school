@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cal(), min(), max() - 넓이 자동 계산</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .item:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background: crimson;
+    }
+
+    .item:nth-child(2) {
+      background: black;
+
+      /* 전체 100%에서 200px 뺀 만큼 */
+      width: calc(100% - 200px);
+
+      /* 최대 너비는 200px이지만 50vw미만이면 더 작아짐 */
+      width: min(50vw, 200px);
+      /* 이건 최소 width가 500px인거 */
+      min-width: 500px;
+
+      /* 최대 너비는 200px이지만 50vw이상이면 더 커짐 */
+      width: max(50vw, 200px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://developer.mozilla.org/ko/docs/Web/CSS/calc() -->
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/min() -->
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/max() -->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+
+</html>
