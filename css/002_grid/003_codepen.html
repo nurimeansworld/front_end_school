@@ -8,11 +8,19 @@
   <title>grid codepen clone</title>
   <!-- <link rel="stylesheet" href="../reset.css"> -->
   <style>
-    body {}
+    body {
+      /* 2. flex를 넣어 레이아웃 조정 */
+      display: flex;
+    }
 
-    header {}
+    header {
+      flex: 1;
+    }
 
     .section-board {
+      flex: 1;
+
+      /* 1. 뼈대 잡고 */
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
