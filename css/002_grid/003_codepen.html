@@ -35,11 +35,20 @@
 
       /* 4.hover 추가 */
       transition: all .3s;
+
+      position: relative;
+      top: 0;
+      left: 0;
     }
 
     .board-item:hover {
       cursor: pointer;
-      transform: translate(10px, -10px);
+
+      /* 6. after에 zindex 사용을 위해 transform 대신 다른 방식으로 적용. 모든 패널 적용  */
+      /* transform: translate(10px, -10px); */
+      top: -15px;
+      left: -15px;
+
     }
 
     /* 5. :after로 판 밑에 그림자 추가(z-index) */
