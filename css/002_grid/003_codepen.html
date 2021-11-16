@@ -61,6 +61,14 @@
       background-color: #999;
       width: 100px;
       height: 100px;
+
+      transition: all .3s;
+    }
+
+    /* 7. hover시 그림자가 움직이는 것 고정 */
+    .board-item:hover::after {
+      top: 25px;
+      left: 25px;
     }
 
     .board-item:nth-child(3n) {
