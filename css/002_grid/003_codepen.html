@@ -42,6 +42,18 @@
       transform: translate(10px, -10px);
     }
 
+    /* 5. :after로 판 밑에 그림자 추가(z-index) */
+    .board-item::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #999;
+      width: 100px;
+      height: 100px;
+    }
+
     .board-item:nth-child(3n) {
       background: #808080;
     }
