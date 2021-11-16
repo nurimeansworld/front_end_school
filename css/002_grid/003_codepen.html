@@ -32,6 +32,14 @@
     .board-item {
       width: 100px;
       height: 100px;
+
+      /* 4.hover 추가 */
+      transition: all .3s;
+    }
+
+    .board-item:hover {
+      cursor: pointer;
+      transform: translate(10px, -10px);
     }
 
     .board-item:nth-child(3n) {
