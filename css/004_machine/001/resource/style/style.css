@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #eae8fe;
+  --point-color: #6327fe;
+}
+
+#app {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* style */
+/* .tit-app {
+  width: 386px;
+} */
+section {
+  width: 360px;
+  /* width: 50%; */
+  min-width: 360px;
+  text-align: center;
+}
+
+.vending-machine {
+  /* width: 50%;
+  min-width: 360px; */
+  float: left;
+}
+
+.vending-machine .list-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* .vending-machine .list-item li {
+  
+} */
+.vending-machine .list-item li .btn-item {
+  margin: 12px;
+  padding: 9px 13px;
+
+  width: 95px;
+  height: 130px;
+
+  background: #fff;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: #333;
+
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+
+.btn-item .img-item {
+  width: 36px;
+}
+
+.btn-item .tit-item {
+  display: block;
+  margin: 6px 0 7px;
+}
+
+.btn-item span {
+  display: block;
+  padding: 5px 0;
+  width: 70px;
+  background: #6327fe;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.vending-machine .list-item li .clicked {
+  padding: 6px 10px;
+  border: 3px solid #6327fe;
+}
+
+.vending-machine .list-item li .soldout {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cont-return,
+.cont-put {
+  width: inherit;
+}
+
+.cont-return .info-balance {
+  display: inline;
+  width: 200px;
+  background: var(--bg-color);
+}
+
+.btn-gray {
+  min-width: 94px;
+  padding: 6px 9px 7px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+}
+.btn-get {
+  padding: 35px 43px;
+  min-width: 94px;
+  background: var(--point-color);
+  border-radius: 5px;
+}
+
+.my-info {
+  /* width: 50%;
+  min-width: 360px; */
+  float: right;
+}

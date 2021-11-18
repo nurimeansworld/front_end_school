@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColaCola</title>
+    <link rel="stylesheet" href="resource/style/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="resource/style/style.css"> -->
+    <link rel="stylesheet" href="resource/style/style_inclass.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <h1 class="tit-app ir">cola cola</h1>
+
+        <!-- section 1(left) -->
+        <section class="vending-machine">
+            <h2 class="ir">자판기 화면</h2>
+            <!-- 1.1 음료 리스트 -->
+            <ul class="list-item">
+                <!-- 기본, 클릭, 품절 -->
+                <li>
+                    <button class="btn-item" data-item="Original Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Original_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Original_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-item clicked" data-item="violet Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Violet_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Violet_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-item soldout" data-item="yellow Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Yellow_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Yellow_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-item " data-item="cool Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Cool_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Cool_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-item clicked" data-item="green Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Green_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Green_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-item soldout" data-item="orange Cola" data-count="" data-price="" data-image="">
+                        <img src="resource/img/Orange_Cola.png" alt="" class="img-item">
+                        <strong class="tit-item">Orange_Cola</strong>
+                        <span>1000원</span>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- 1.2 데이터 리스트 -->
+            <div class="cont-return">
+                <div class="inp-backgound info-balance">
+                    잔액 : <span class="txt-balance">1,000원</span>
+                </div>
+                <button class="btn-gray btn-return">거스름돈 반환</button>
+            </div>
+            <div class="cont-put">
+                <input type="number" class="inp-put" placeholder="입금액 입력">
+                <button class="btn-gray btn-put">입금</button>
+            </div>
+            <div class="cont-get">
+                <strong class="ir">선택한 음료</strong>
+                <ul class="list-item-staged">
+                    <li class="item-staged">
+                        <img src="" alt="" class="img-item">
+                        <strong class="txt-item">Original_Cola</strong>
+                        <span class="num-counter">1</span>
+                    </li>
+                </ul>
+                <button class="btn-get">획득</button>
+            </div>
+        </section>
+        <!-- //section 1 -->
+
+        <!-- section 2(right) -->
+        <section class="my-info">
+            <h2 class="ir">나의 정보 화면</h2>
+            <div class="cont-mymoney">
+                <div class="inp-backgound info-mymoney">소지금 <span class="txt-money">25,000원</span></div>
+            </div>
+            <div class="cont-getdrink">
+                <strong class="ir">획득한 음료</strong>
+                <ul class="list-item-staged">
+                    <li class="item-staged">
+                        <img src="" alt="" class="img-item">
+                        <strong class="txt-item">Original_Cola</strong>
+                        <span class="num-counter">1</span>
+                    </li>
+                </ul>
+                총금액 : 9,000원
+            </div>
+
+        </section>
+        <!-- //section 2 -->
+    </div>
+
+</body>
+
+</html>

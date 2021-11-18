@@ -1,0 +1,84 @@
+@keyframes object-rotate {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(1turn);
+  }
+}
+@keyframes test-rotate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes scene-rotate {
+  0% {
+    transform: rotateX(0) rotateZ(0) rotateY(0);
+  }
+  100% {
+    /* 정확히 한 바퀴를 돌리고 싶을 때 1turn 값 사용 */
+    transform: rotateX(10deg) rotateZ(-20deg) rotateY(30deg);
+  }
+}
+
+body {
+  background: skyblue;
+  width: 100vh;
+}
+
+.container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene {
+  transform-style: preserve-3d;
+  /* 회전 */
+  /* transform: rotate3d(1, 1, 1, 330deg); */
+  transform: rotateX(10deg) rotateZ(-20deg);
+  animation: test-rotate 8s linear infinite alternate;
+}
+
+.circle {
+  font-size: 50px;
+  font-weight: bold;
+
+  /* 회전하는 애니 */
+  animation: object-rotate 10s linear infinite;
+
+  /* 아래 속성은 상속 안됨 */
+  transform-style: preserve-3d;
+
+  /* animation: scene-rotate 8s linear infinite alternate; */
+}
+.circle .word {
+  transform-style: preserve-3d;
+}
+.circle span {
+  /* background: red; */
+  position: absolute;
+  transform: rotateY(calc(var(--char-index) * 12deg)) translateZ(300px);
+}
+
+.planet {
+  position: absolute;
+  margin: -120px 0 0 -120px;
+  width: 300px;
+  height: 300px;
+  /* background-color: orange; */
+  border-radius: 50%;
+  background-image: url(byebye.png);
+  background-size: 400px;
+  background-repeat: no-repeat;
+}
