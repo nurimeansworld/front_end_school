@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* base */
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+}
+#appLogin {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* flex-direction: column; */
+}
+.cont-login {
+  /* width: 500px; */
+  /* 500px - 30px*2 = 440px */
+  width: 440px;
+  /* height: 240px; */
+  height: 172px;
+  padding: 38px 30px 30px;
+
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  /* box-sizing: border-box; */
+  border-radius: 5px;
+}
+.cont-login img {
+  width: 122px;
+}
+.cont-login .txt-login {
+  margin: 32px 0 36px;
+}
+
+/* 211119 진도 */
+/* modal */
+.modal-login {
+  display: none;
+  height: 100%;
+}
+.modal-login.on {
+  display: block;
+}
+.modal-login::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.7;
+  /* z-index를 주어서 뒤의 요소들 클릭이 불가능하게 만들기 위해 */
+  z-index: 10;
+}
+.modal-login .cont-form-login {
+  width: 100%;
+  max-width: 520px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 20;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.cont-form-login .tit-form {
+  padding: 20px 0 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+.cont-form-login .txt-form {
+  margin: 26px 0 24px;
+  padding-left: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cont-form-login .form-login {
+  padding: 0 24px 0;
+  text-align: center;
+}
+
+.form-login .inp-error {
+  text-align: left;
+}
+.form-login .labl-hold {
+  margin: 17px 0 21px;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+.form-login .labl-hold::before {
+  margin-right: 6px;
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("../../images/check-box-empty.png");
+  background-size: 22px;
+  vertical-align: -5px;
+}
+
+.form-login .inp-hold:checked + .labl-hold::before {
+  background-image: url("../../images/check-box.png");
+}
+
+.form-login a[class^="link"] {
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #767676;
+  text-decoration: none;
+}
+
+.form-login .link-signup::after {
+  display: inline-block;
+}
+.cont-form-login .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 22px 24px;
+  box-sizing: content-box;
+  background-color: transparent;
+}
+
+.cont-form-login .cont-sns-login {
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 24px 25px;
+}
+ㄱ .cont-sns-login::before {
+  content: "또는";
+  display: block;
+  width: 52px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.cont-sns-login::after {
+  content: "";
+  display: block;
+  width: calc(100% - 48px);
+  position: absolute;
+  top: 9px;
+  height: 1px;
+  background: #c4c4c4;
+}
+.cont-sns-login .list-sns li + li {
+  margin-top: 10px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 login</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="css/style_module.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main id="appLogin">
+    <article class="cont-login">
+      <h1 class="tit-weniv"><img src="images/weniv-logo.png" alt="WENIV"></h1>
+      <p class="txt-login">위니브를 더 즐겁고 편리하게 이용하세요.</p>
+      <button type="button" class="btn-login">로그인</button>
+    </article>
+  </main>
+
+  <!-- 211119 진도 -->
+  <!-- modal -->
+  <article class="modal-login on">
+    <h2 class="sr-only">회원으로 로그인 혹은 SNS 로그인</h2>
+    <section class="cont-form-login">
+      <h3 class="tit-form">로그인 또는 회원가입</h3>
+      <p class="txt-form">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+      <form class="form-login">
+        <!-- id -->
+        <fieldset class="module-inp module-inp-id error">
+          <label for="inpId" class="sr-only">아이디</label>
+          <input type="text" class="inp-login" id="inpId" placeholder="아이디">
+          <!-- strong : 경고 문구 -->
+          <strong class="inp-error">아이디를 입력해 주세요.</strong>
+        </fieldset>
+        <!-- pw -->
+        <fieldset class="module-inp error">
+          <label for="inpPw" class="sr-only">비밀번호</label>
+          <input type="password" class="inp-login" id="inpPw" placeholder="비밀번호">
+          <!-- strong : 경고 문구 -->
+          <strong class="inp-error">아이디 혹은 비밀번호과 일치하지 않습니다.</strong>
+        </fieldset>
+        <input type="checkbox" id="inpHold" class="inp-hold sr-only">
+        <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+        <button type="button" class="btn-login">로그인</button>
+        <button type="button" class="btn-close"><img src="images/btn-close.png" alt="로그인 닫기"></button>
+        <a href="javascript:void(0);" class="link-signup">회원가입</a>
+        <a href="javascript:void(0);" class="link-lost">아이디/비밀번호 찾기</a>
+      </form>
+      <section class="cont-sns-login">
+        <h4 class="sr-only">소셜 계정으로 로그인</h4>
+        <ul class="list-sns">
+          <li><a href="" class="icon-google link-sns-login">구글 계정으로 로그인</a></li>
+          <li><a href="" class="icon-naver link-sns-login">네이버 계정으로 로그인</a></li>
+          <li><a href="" class="icon-facebook link-sns-login">페이스북 계정으로 로그인</a></li>
+          <li><a href="" class="icon-kakao link-sns-login">카카오 계정으로 로그인</a></li>
+        </ul>
+      </section>
+    </section>
+  </article>
+  <!-- //modal -->
+
+</body>
+
+</html>

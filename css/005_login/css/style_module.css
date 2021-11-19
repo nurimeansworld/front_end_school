@@ -1,0 +1,101 @@
+/* 211116 진도 */
+.btn-login {
+  width: 100%;
+  padding: 17px 0 15px;
+
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 28px;
+  background: #2f80ed;
+  border-radius: 5px;
+  border-style: none;
+  color: #fff;
+}
+
+.btn-close {
+  /* 전체 크기는 16인데 이미지 크기는 4라서 paddng 0으로 꽉차게 한다 */
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  /* background-color: transparent; */
+  /* background: none; */
+}
+
+.module-inp .inp-login {
+  display: block;
+  width: 100%;
+  padding: 15px 0 15px 16px;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.module-inp.module-inp-id.error input {
+  border-color: #f4492e;
+}
+
+.module-inp .inp-error {
+  /* sr이 읽지 않아야 하니까 none 해두고 나타낼 때 block */
+  display: none;
+  margin: 6px 0 0 4px;
+  color: #f4492e;
+  font-size: 14px;
+  line-height: 18px;
+}
+.module-inp .inp-error {
+  display: block;
+}
+
+.module-inp + .module-inp {
+  margin-top: 10px;
+}
+.link-sns-login {
+  display: block;
+  padding: 15px 0 16px 15px;
+
+  color: #767676;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #767676;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.link-sns-login::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/sns-google.png);
+  background-size: 22px;
+  float: left;
+}
+
+.link-sns-login.icon-naver {
+  border-color: #00bf14;
+}
+.link-sns-login.icon-naver::before {
+  background-image: url(../images/sns-naver.png);
+}
+
+.link-sns-login.icon-facebook {
+  border-color: #2d9cdb;
+}
+.link-sns-login.icon-facebook::before {
+  background-image: url(../images/sns-facebook.png);
+}
+
+.link-sns-login.icon-kakao {
+  border-color: #f2c94c;
+}
+.link-sns-login.icon-kakao::before {
+  background-image: url(../images/sns-kakao.png);
+}
