@@ -1,0 +1,75 @@
+body {
+  margin: 30px;
+  /* background-color: #ccc; */
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 2px 2px #ccc;
+  color: gray;
+}
+
+.cont-select {
+  margin: 70px;
+}
+
+.cont-select .btn-select {
+  padding: 13px auto 14px;
+  width: 200px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  font-size: 12px;
+  line-height: 14px;
+
+  text-align: left;
+  padding: 13px 14px;
+}
+
+.cont-select .btn-select.on + .list-member {
+  display: block;
+}
+
+.cont-select .btn-select:focus {
+  /* border: 3px solid #f8e4ff; */
+  outline: 3px solid #f8e4ff;
+  border: 1px solid #9b51e0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.cont-select .list-member {
+  display: none;
+  width: 200px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+
+  /* padding: 0 8px; */
+  margin-top: 9px;
+}
+
+.cont-select .list-member li {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  margin: 5px 8px;
+}
+
+.cont-select .list-member button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+
+.cont-select .list-member li:hover {
+  background: #f8e4ff;
+  border-radius: 8px;
+}
