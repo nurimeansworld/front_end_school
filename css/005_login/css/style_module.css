@@ -74,8 +74,9 @@
   content: "";
   width: 22px;
   height: 22px;
-  background-image: url(../images/sns-google.png);
-  background-size: 22px;
+  background-image: url(../images/sns_sprites_retina.png);
+  background-position: -53px -181px;
+  background-size: 256px;
   float: left;
 }
 
@@ -83,19 +84,19 @@
   border-color: #00bf14;
 }
 .link-sns-login.icon-naver::before {
-  background-image: url(../images/sns-naver.png);
+  background-position: -53px -53px;
 }
 
 .link-sns-login.icon-facebook {
   border-color: #2d9cdb;
 }
 .link-sns-login.icon-facebook::before {
-  background-image: url(../images/sns-facebook.png);
+  background-position: -181px -53px;
 }
 
 .link-sns-login.icon-kakao {
   border-color: #f2c94c;
 }
 .link-sns-login.icon-kakao::before {
-  background-image: url(../images/sns-kakao.png);
+  background-position: -181px -181px;
 }
