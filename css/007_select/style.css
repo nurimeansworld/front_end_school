@@ -1,46 +1,63 @@
 body {
-  margin: 30px;
-  /* background-color: #ccc; */
+  background-color: #ccc;
 }
 
 h2 {
-  text-align: center;
-  font-weight: 700;
+  margin: 30px;
+
   font-size: 20px;
-  text-shadow: 2px 2px #ccc;
+  font-weight: 700;
   color: gray;
+  text-align: center;
+  text-shadow: 2px 2px #f8e4ff;
 }
 
 .cont-select {
-  margin: 70px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
 }
 
 .cont-select .btn-select {
-  padding: 13px auto 14px;
+  padding: 13px 14px;
   width: 200px;
-  background: #ffffff;
-  border: 1px solid #c4c4c4;
-  box-sizing: border-box;
-  border-radius: 10px;
-
   font-size: 12px;
   line-height: 14px;
-
   text-align: left;
-  padding: 13px 14px;
+  background: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  /* box-sizing: border-box; */
+}
+
+.cont-select .btn-select::after {
+  margin-top: 4px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  float: right;
+  background-image: url(image/btn_drop_down.png);
+  background-repeat: no-repeat;
+}
+
+.cont-select .btn-select.on {
+  outline: 3px solid #f8e4ff;
+  border: 1px solid #9b51e0;
+  border-radius: 10px;
+  /* box-sizing: border-box; */
+}
+
+.cont-select .btn-select.on::after {
+  background-image: url(image/btn_drop_up.png);
 }
 
 .cont-select .btn-select.on + .list-member {
   display: block;
 }
 
-.cont-select .btn-select:focus {
-  /* border: 3px solid #f8e4ff; */
-  outline: 3px solid #f8e4ff;
-  border: 1px solid #9b51e0;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
 .cont-select .list-member {
   display: none;
   width: 200px;
@@ -54,18 +71,18 @@ h2 {
 }
 
 .cont-select .list-member li {
+  margin: 5px 8px;
+  text-align: left;
   font-size: 14px;
   line-height: 16px;
-  text-align: left;
-  margin: 5px 8px;
 }
 
 .cont-select .list-member button {
+  padding: 12px 10px;
   width: 100%;
   text-align: left;
   background: none;
   border: none;
-  padding: 12px 10px;
   cursor: pointer;
 }
 
