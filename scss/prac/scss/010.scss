@@ -1,0 +1,14 @@
+// 3. 5-2 전역변수
+$font-p: 15px; // 전역변수
+$mycolor: #ffffff !global;
+
+.main-box {
+  p {
+    font-size: $font-p;
+  }
+  a {
+    font-size: $font-p;
+    color: $mycolor;
+    text-decoration: none;
+  }
+}

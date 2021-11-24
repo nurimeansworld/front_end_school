@@ -1,0 +1,21 @@
+// 위에 코드를 가져와서 기본값을 설정해주었다.
+@mixin image-style($ul, $size, $repeat, $positionX: 50%, $positionY: 50%) {
+  background-image: url($ul);
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $positionX $positionY;
+}
+
+.profile {
+  @include image-style("./assets/user.jpg", cover, no-repeat);
+}
+// profile과 .box-one은 서로 관계가 없지만, 코드가 중복되기때문에 mixin을 만들어서
+// 각 요소에서 사용합니다.
+
+@mixin hojun-font($x, $y) {
+  font-size: $x * $y + px;
+}
+
+div {
+  @include hojun-font(10, 10);
+}

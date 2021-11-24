@@ -1,0 +1,22 @@
+// 3.3 변수 type - map
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+$font-sizes: (
+  "h1": 45px,
+  "h2": 19px,
+  "p": 16px,
+);
+
+div {
+  font-weight: map-get($font-weights, "bold");
+}
+
+section {
+  h2 {
+    font-size: map-get($font-sizes, "h1");
+  }
+}
+// map-get($font-size, "h3");

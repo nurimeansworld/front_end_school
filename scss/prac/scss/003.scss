@@ -1,0 +1,10 @@
+// 중첩(& 상위 선택자 중첩)
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: all 0.2s;
+  &:hover {
+    background-color: pink;
+  }
+}
