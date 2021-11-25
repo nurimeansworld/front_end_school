@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 인터랙티브 - video</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    /* video {
+      width: 33%;
+    } */
+
+    video {
+      width: 100%;
+    }
+
+    .cont-video {
+      position: relative;
+
+      /* calc(비디오 규격 * 100%)
+      calc(720/1280 * 100%) */
+      padding-top: 56.25%;
+    }
+
+    .video-next-level {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- video 태그는 반응형을 설정할 때 굉장히 용이한 태그 -->
+  <!-- 기본 태그 -->
+  <video width="500px" src="next_level.mp4"></video>
+  <!-- controls 를 넣어 플레이어 추가 -->
+  <video controls width="500px" src="next_level.mp4"></video>
+  <!-- preload="none"을 넣어 미리 로딩 X -->
+  <video preload="none" controls width="500px" src="next_level.mp4"></video>
+  <!-- poster를 넣어 썸네일 설정 가능 -->
+  <video poster="../009_tailwind/resume/IMG_2509.jpg" preload="none" controls width="500px"
+    src="next_level.mp4"></video>
+  <!-- autoplay, muted를 넣어 자동재생 -->
+  <!-- 바로 소리를 틀지 않는 것 : 접근성에 위배(들어가자마자 소리가 들리면 바로 끌 수 있는 설정을 하거나 그래야 함), 과도한 트래픽 방지 -->
+  <video autoplay muted poster="../009_tailwind/resume/IMG_2509.jpg" controls width="500px"
+    src="next_level.mp4"></video>
+
+  <!-- https://developers.google.com/youtube/player_parameters?hl=ko -->
+  <iframe class="video-next-level"
+    src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=0&mute=1&loop=1&playlist=4TWR90KJl84&controls=1"
+    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+
+  <article class="cont-video">
+    <h3>반응형 동영상 만들기</h3>
+    <iframe class="video-next-level"
+      src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=1&mute=1&loop=1&playlist=4TWR90KJl84&controls=1"
+      title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </article>
+</body>
+
+</html>
