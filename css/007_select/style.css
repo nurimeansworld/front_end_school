@@ -1,56 +1,66 @@
-body {
+/* body {
   background-color: #ccc;
-}
+} */
 
 h2 {
   margin: 30px;
 
-  font-size: 20px;
+  /* font-size: 20px;
   font-weight: 700;
   color: gray;
   text-align: center;
-  text-shadow: 2px 2px #f8e4ff;
+  text-shadow: 2px 2px #f8e4ff; */
 }
 
 .cont-select {
-  width: 300px;
-  border-radius: 10px;
+  width: 200px;
+
+  /* border-radius: 10px;
   margin: 0 auto;
   padding: 20px;
-  background: #fff;
+  background: #fff; */
 }
 
 .cont-select .btn-select {
-  padding: 13px 14px;
-  width: 200px;
+  /* 나와 동일한 부분 */
+  /* width: 200px; */
+  /* padding: 13px 14px; */
   font-size: 12px;
   line-height: 14px;
   text-align: left;
   background: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
-  /* box-sizing: border-box; */
+
+  /* 수정 */
+  /* width: 고정 말고 위의 퍼센트로 */
+  width: 100%;
+  /* 말줄임 표시와 겹치지 않기 위해 설정 */
+  padding: 13px 30px 13px 14px;
+  cursor: pointer;
+  /* 말줄임 속성 추가 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  /* background-image 가상요소말고 여기에 */
+  background-image: url(image/btn_drop_down.png) center right 14px no-repeat;
 }
 
-.cont-select .btn-select::after {
+/* 아예 after 속성을 사용하지 않고 button에만 */
+/* .cont-select .btn-select::after {
   margin-top: 4px;
   content: "";
   display: block;
   width: 12px;
   height: 8px;
-  float: right;
-  background-image: url(image/btn_drop_down.png);
-  background-repeat: no-repeat;
-}
+  float: right; 
+} */
 
-.cont-select .btn-select.on {
-  outline: 3px solid #f8e4ff;
-  border: 1px solid #9b51e0;
-}
-
-.cont-select .btn-select.on::after {
-  background-image: url(image/btn_drop_up.png);
-}
+/* 위의 2줄을 아래 1줄로 축약 가능 */
+/* background-image: url(image/btn_drop_down.png);
+  background-repeat: no-repeat; */
+/* background-image: url(image/btn_drop_down.png) no-repeat; */
 
 .cont-select .btn-select.on + .list-member {
   display: block;
@@ -58,6 +68,7 @@ h2 {
 
 .cont-select .list-member {
   display: none;
+  position: absolute;
   width: 200px;
   border: 1px solid #c4c4c4;
   box-sizing: border-box;
@@ -75,12 +86,16 @@ h2 {
   line-height: 16px;
 }
 
-.cont-select .list-member button {
-  padding: 12px 10px;
+.cont-select .list-member li button {
+  /* padding: 12px 10px; */
   text-align: left;
   background: none;
   border: none;
   cursor: pointer;
+
+  /* 추가 */
+  width: 100%;
+  padding: 7px 10px;
 }
 
 .cont-select .list-member li:hover {
