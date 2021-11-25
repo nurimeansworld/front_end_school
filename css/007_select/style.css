@@ -46,8 +46,6 @@ h2 {
 .cont-select .btn-select.on {
   outline: 3px solid #f8e4ff;
   border: 1px solid #9b51e0;
-  border-radius: 10px;
-  /* box-sizing: border-box; */
 }
 
 .cont-select .btn-select.on::after {
@@ -79,7 +77,6 @@ h2 {
 
 .cont-select .list-member button {
   padding: 12px 10px;
-  width: 100%;
   text-align: left;
   background: none;
   border: none;
