@@ -23,12 +23,46 @@ for (let index = 0; index < array1.length; index++) {
 console.log(`분산 : ${분산}`);
 console.log(`표준 편자 : ${표준편차}`);
 
+// ----------------------------------------
 // 2. 연습문제 2
 // 다음 string의 평균 값
 
 // hint code : '5, 4, 10, 2, 5'.split(',')
 let array2 = "5, 4, 10, 2, 5";
 
-// 연습문제 3
+// ----------------------------------------
+// 3. 연습문제 3
+// 콤마 찍기 1
+const n = 12345.6789;
+const comma = n.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+
+document.writeln(comma);
+
+// 콤마 찍기 2
+navigator.language;
+const n = 12345.6789;
+n.toLocaleString("ko-KR");
+
+// 콤마 찍기 3
+let n = 12345678;
+n += "";
+reverse = "";
 // 문자열 뒤집기
-let s = "hello world";
+for (let i = 0; i < n.length; i++) {
+  reverse = n[i] + reverse;
+}
+console.log(reverse);
+
+let sample = "";
+count = 0;
+for (let i = 0; i < reverse.length; ++i) {
+  if (count < 2) {
+    sample += reverse[i];
+    ++count;
+  } else {
+    sample += reverse[i];
+    sample += ",";
+    count = 0;
+  }
+}
+console.log(sample);

@@ -1,16 +1,16 @@
 // 자주 쓰이는 함수들
 let s = "abcdefABCDEF";
 
-console.log(s.length);
-console.log(s.indexOf("CDE"));
-console.log(s.search("ABC"));
+console.log(s.length); // 12
+console.log(s.indexOf("CDE")); // 8
+console.log(s.search("ABC")); // 6
 // 없으면 -1 return
-console.log(s.indexOf("G"));
-console.log(s.search("G"));
-console.log(s.slice(3, 5));
-console.log(s.slice(3, -5));
-console.log(s.slice(5));
-console.log(s.substr(6, 3));
-console.log(s.substring(6));
+console.log(s.indexOf("G")); // -1
+console.log(s.search("G")); // -1
+console.log(s.slice(3, 5)); // de
+console.log(s.slice(3, -5)); // deFA
+console.log(s.slice(5)); // fABCDEF
+console.log(s.substr(6, 3)); // ABC
+console.log(s.substring(6)); // ABCDEF
 
-s.replace("ABC", "nuri");
+console.log(s.replace("ABC", "nuri")); // abcdefnuriDEF

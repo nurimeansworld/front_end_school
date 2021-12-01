@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>호이스팅</title>
+</head>
+
+<body>
+  <script>
+    // 함수 선언식: function fname(params) { } -> 호이스팅 O
+    // 함수 표현식: let fname = function () { } -> 호이스팅 X
+    // 함수 호출식: fname();
+
+    console.log(add1(10, 20));
+    console.log(add2(10, 20));
+    console.log(mul(10, 20));
+
+    function add1(a, b) {
+      return a + b;
+    }
+    function add2(a, b) {
+      return a + b;
+    }
+    let mul = function (a, b) {
+      return a * b;
+    }
+  </script>
+
+</body>
+
+</html>
