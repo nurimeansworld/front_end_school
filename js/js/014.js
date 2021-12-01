@@ -11,7 +11,6 @@ console.log(`getDay : ${d.getDay()}`);
 console.log(`getHours : ${d.getHours()}`);
 console.log(`getMinutes : ${d.getMinutes()}`);
 console.log(`getSeconds : ${d.getSeconds()}`);
-console.log(`getMinutes : ${d.getMinutes()}`);
 
 // --------------------------
 // 배열 선언

@@ -47,6 +47,7 @@ n.toLocaleString("ko-KR");
 let n = 12345678;
 n += "";
 reverse = "";
+
 // 문자열 뒤집기
 for (let i = 0; i < n.length; i++) {
   reverse = n[i] + reverse;
