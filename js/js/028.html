@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 제어 명령어</title>
+</head>
+
+<body>
+  <!-- 1. 이벤트 삽입 -->
+  <button>HELLO!</button>
+  <script>
+    // 이벤트의 타입에는 click, mouseover, mouseout, wheel 등 다양한 이벤트를 감지합니다.
+    // listener 함수의 인수에는 이벤트에 대한 정보가 담겨있습니다.
+
+    const myBtn = document.querySelector('button');
+
+    myBtn.addEventListener('click', function () {
+      // myBtn.addEventListener('mouseover', function () {
+      // myBtn.addEventListener('mouseout', function () {
+      // myBtn.addEventListener('wheel', function () {
+      console.log('hello world');
+    })
+  </script>
+  <!-- // 1. 이벤트 삽입 -->
+  <!-- 2. 클래스 제어 -->
+
+  <button>Make me BLUE!</button>
+  <script>
+    const myBtn = document.querySelector("button");
+    myBtn.addEventListener("click", function () {
+
+      // blue 라는 클래스의 속성 값을 지정 할 수 있습니다.
+      myBtn.classList.add("blue");
+
+      // myBtn.classList.remove("blue");     클래스를 제거합니다.
+      // myBtn.classList.toggle("blue");     클래스를 토글합니다.
+      // myBtn.classList.contains("blue");   해당하는 클래스가 있는지 확인합니다.
+    })
+  </script>
+  <!-- // 2. 클래스 제어 -->
+  <!-- 3. 요소 제어 -->
+  <ul></ul>
+  <button>Make me MORE!</button>
+
+  <script>
+    // document.createElement(target); target 요소를 생성합니다.
+    // document.createTextNode(target); target 텍스트를 생성합니다.
+    // element.appendChild(target);    target 요소를 element의 자식으로 위치합니다.
+    // element.removeChild(target);    element의 target 자식 요소를 제거합니다.
+
+    const myBtn = document.querySelector("button");
+    const myUl = document.querySelector("ul");
+
+    myBtn.addEventListener('click', function () {
+      for (let i = 0; i < 5; i++) {
+        const myLi = document.createElement('li');
+        myUl.appendChild(myLi);
+      }
+    })
+  </script>
+  <!-- //3. 요소 제어 -->
+</body>
+
+</html>

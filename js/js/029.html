@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 클래스 제어 실습</title>
+  <style>
+    section {
+      text-align: center;
+    }
+
+    .changeDiv {
+      margin: 0 auto;
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+    }
+
+    .btn-wrapper {
+      margin: 0 auto;
+      padding: 20px 0;
+      width: 400px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .gray {
+      background: gray;
+    }
+
+    .purple {
+      background: purple;
+    }
+
+    .pink {
+      background: pink;
+    }
+
+    /* inClass */
+    .canvas {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-color: black;
+    }
+
+    .canvas.red {
+      background-color: red;
+    }
+
+    .canvas.yellow {
+      background-color: yellow;
+    }
+
+    .canvas.green {
+      background-color: green;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 500px;
+      margin: 50px auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="changeDiv">🎨</div>
+    <div class="btn-wrapper">
+      <button class="gray">gray</button>
+      <button class="purple">puple</button>
+      <button class="pink">pink</button>
+    </div>
+  </section>
+
+  <!-- inClass -->
+  <div class="canvas"></div>
+  <ul>
+    <li><button type="button" class="btn-red">빨강</button></li>
+    <li><button type="button" class="btn-yellow">노랑</button></li>
+    <li><button type="button" class="btn-green">초록</button></li>
+  </ul>
+  <!-- //inClass -->
+
+
+  <script>
+    let colorBtn = document.querySelector('button');
+    colorBtn.addEventListener('click', function () {
+      let changeDiv = document.getElementsByClassName("changeDiv")[0];
+      console.log(changeDiv);
+      changeDiv.classList.add(colorBtn.textContent);
+    })
+
+    // inClass
+    const canvas = document.querySelector('.canvas');
+    const btnRed = document.querySelector('.btn-red');
+    const btnYellow = document.querySelector('.btn-yellow');
+    const btnGreen = document.querySelector('.btn-green');
+
+    btnRed.addEventListener('click', () => {
+      canvas.classList.remove('red', 'yellow', 'green');
+      canvas.classList.add('red');
+    })
+    btnYellow.addEventListener('click', () => {
+      canvas.classList.remove('red', 'yellow', 'green');
+      canvas.classList.add('yellow');
+    })
+    btnGreen.addEventListener('click', () => {
+      canvas.classList.remove('red', 'yellow', 'green');
+      canvas.classList.add('green');
+    })
+
+  </script>
+</body>
+
+</html>
