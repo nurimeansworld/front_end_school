@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery</title>
+  <!-- jquery minified -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    // 3장 내용
+    // 문서가 다 준비되면 실행!
+    $(function () { // 이것을 주석처리하면 실행이 안됩니다. html이 다 로드되지 않은 상태이기 때문에 그렇습니다.
+      $('.box').fadeOut(3000).fadeIn(3000);
+    })
+  </script>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: palevioletred;
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      opacity: 0.3;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="one">jQuery 실습</h1>
+  <button class="btn1">click!</button>
+  <p class="sample-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum hic error perferendis, totam
+    natus tenetur amet
+    adipisci! Voluptatem nemo animi vel vitae rem culpa, ducimus eaque debitis delectus ab.</p>
+  <p class="sample-html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum hic error perferendis, totam
+    natus tenetur amet
+    adipisci! Voluptatem nemo animi vel vitae rem culpa, ducimus eaque debitis delectus ab.</p>
+  <img>
+  <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+  <button class="btn-alert">메모장 내용 alert로 출력</button>
+  <button class="btn-clear">메모장 내용 지우기</button>
+
+  <div class="wrapper">
+    <h1 class="title">TITLE</h1>
+    <ul>
+      <li class="items">item 1</li>
+      <li class="items">item 2</li>
+      <li class="items">item 3</li>
+    </ul>
+  </div>
+  <ol class="ol2">
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+    <li>hello</li>
+  </ol>
+  <div id="removeTest">요기가 없어진다</div>
+  <div class="one blue">one</div>
+  <div class="two">two</div>
+  <div class="box">.click(function() {})</div>
+  <div class="box2">.click(), .hover(), .mouseenter(), .mouseleave()</div>
+  <button class="btnAnimate">btnAnimate</button>
+
+  <script>
+    // -----------1장-----------
+    // // 같은 코드
+    // 1. .text() - inner text 수정
+    // document.getElementById("one").innerHTML = 'JavaScript';
+    $('#one').text('jQuery');
+
+
+    // 2. .click() - button 클릭해 alert
+    // const btn1 = document.getElementsByClassName("btn1")[0];
+    // btn1.addEventListener('click', event => {
+    //   alert('클릭 완료 - JavaScript');
+    // });
+    $('.btn1').click(function () {
+      alert('클릭 완료 - jQuery');
+    });
+
+
+    // 3. .text(), .html(), .css() - innerHTML
+    // const sampleText = document.getElementsByClassName("sample-text")[0];
+    // const sampleHtml = document.getElementsByClassName("sample-html")[0];
+    // sampleText.innerText = '<strong>이건 텍스트 그대로 들어가고</strong>';
+    // sampleHtml.innerHTML = '<strong>이건 html로 들어가고</strong>';
+    // sampleHtml.style.color = 'grey';
+    $('.sample-text').text('<strong>이건 텍스트 그대로 들어가고</strong>');
+    $('.sample-html').html('<strong>이건 html로 들어가고</strong>');
+    $('.sample-html').css('color', 'grey');
+
+    // 4. .attr() - img attribute(속성) 추가
+    // const img = document.querySelector("img");
+    // img.src = 'https://item.kakaocdn.net/do/43d6c7dd0b7368040152085806c54f4df43ad912ad8dd55b04db6a64cddaf76d';
+    // img.alt = '다람이가 뛰고 있는 이미지입니다.';
+    $('img').attr('src', 'https://item.kakaocdn.net/do/43d6c7dd0b7368040152085806c54f4df43ad912ad8dd55b04db6a64cddaf76d');
+    $('img').attr('alt', '다람이가 뛰고 있는 이미지입니다.');
+    // 아래처럼 축약 가능
+    // $('img').attr('src', 'https://item.kakaocdn.net/do/43d6c7dd0b7368040152085806c54f4df43ad912ad8dd55b04db6a64cddaf76d').attr('alt', '다람이가 뛰고 있는 이미지입니다.');
+
+    // 5. .val()
+    const btnAlert = document.getElementsByClassName("btn-alert")[0];
+    const btnClear = document.getElementsByClassName("btn-clear")[0];
+    btnAlert.addEventListener('click', event => {
+      let memoContent = document.getElementById('memo').value;
+      alert(memoContent);
+    });
+    btnClear.addEventListener('click', event => {
+      document.getElementById('memo').value = '';
+      console.log(document.getElementById('memo'));
+    });
+
+    // $('.btn-alert').click(function () {
+    //   let memoContent = $('#memo').val();
+    //   alert(memoContent);
+    // });
+    // $('.btn-clear').click(function () {
+    //   let memoContent = $('#memo').val("");
+    // });
+
+
+    // -----------2장-----------
+    // 6. .parent(), .childeren, 필터
+    // Q1. items 부모를 찾아 background - color를 파란색으로 바꿔주세요.
+    $('.items').parent().css('background', 'blue');
+    // Q2. items 2번째 color를 빨간색으로 바꿔주세요
+    $('.items:nth-child(2)').css('color', 'red');
+    // Q3. ol2의 자식인 li요소를 선택하여 1번부터 3번까지 color를 녹색으로 바꿔주세요.
+    $('.ol2').children('li:lt(3)').css('color', 'green');
+    // Q4. ol2의 자식인 li요소를 선택하여 7번부터 10번까지 color를 파란색, background - color를 빨간색으로 바꿔주세요.
+    $('.ol2').children(':gt(5):lt(10)').css('color', 'blue').css('background-color', 'red');
+
+
+    // 7. .append(), .prepend()
+    $('ul').append('<li>append로 추가한다!</li>');
+    $('ul').prepend('<li>prepend로 추가한다!</li>');
+
+    // 8. .after(), .before()
+    $('ul').after('<h2>after로 추가한 끝!</h2>');
+    $('ul').before('<h2>before로 추가한 시작!</h2>');
+
+    // 9. .remove()
+    $('#removeTest').remove();
+
+    // 10. .addClass(), .removeClass(), .toggleClass(), .css()
+    $('.ol2').addClass('important');
+    $('.one, .two p').removeClass('blue');
+    $(".one, .two p").toggleClass("blue");
+    $('.blue').css("background-color", "blue");
+
+
+    // -----------3장-----------
+    // .click(function() { }) - 클릭 이벤트
+    // .hide(), .stop()
+
+    // div 클릭했을 때 안 보이게 하기
+    // dom이 준비되면 실행해라!
+    $(function () {
+      // $('.box').click(function () {
+      //   $(this).hide();
+      // });
+
+      $('.box').click(function () {
+        $(this).stop();
+      });
+    })
+
+    // .animate()
+    $('.btnAnimate').click(function () {
+      $('.box2').animate({
+        width: '300px',
+        height: '300px',
+        opacity: 1
+      }, 'slow');
+    });
+
+    // .hover()
+    $('.box2').hover(function () {
+      $(this).css('background', 'green');
+    }, function () {
+      $(this).css('background', 'yellow');
+    });
+
+    // .mouseenter(), .mouseleave()
+    $('.box2').mouseenter(function () {
+      alert('mouseenter');
+    });
+    $('.box2').mouseleave(function () {
+      alert('mouseleave');
+    });
+
+  </script>
+</body>
+
+</html>
