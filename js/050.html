@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.8 이벤트 this</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <article class="parent">
+    <ol>
+      <li><button class="btn-first" type="button">버튼1</button></li>
+      <li><button type="button">버튼2</button></li>
+      <li><button type="button">버튼3</button></li>
+    </ol>
+  </article>
+
+  <script>
+    const parent = document.querySelector('.parent');
+    parent.addEventListener('click', function (event) {
+      // parent.addEventListener('click', (event) => {    // this의 경우 상위 스코프를 가리킨다.
+      console.log(this);
+    })
+  </script>
+</body>
+
+</html>

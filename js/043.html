@@ -94,7 +94,7 @@
     // 3. .text(), .html(), .css() - innerHTML
     // const sampleText = document.getElementsByClassName("sample-text")[0];
     // const sampleHtml = document.getElementsByClassName("sample-html")[0];
-    // sampleText.innerText = '<strong>이건 텍스트 그대로 들어가고</strong>';
+    // sampleText.innerText = '<strong>이건 텍스트 그대로 들어가고</strong>'; // 혹은 innerContent
     // sampleHtml.innerHTML = '<strong>이건 html로 들어가고</strong>';
     // sampleHtml.style.color = 'grey';
     $('.sample-text').text('<strong>이건 텍스트 그대로 들어가고</strong>');
@@ -111,24 +111,24 @@
     // $('img').attr('src', 'https://item.kakaocdn.net/do/43d6c7dd0b7368040152085806c54f4df43ad912ad8dd55b04db6a64cddaf76d').attr('alt', '다람이가 뛰고 있는 이미지입니다.');
 
     // 5. .val()
-    const btnAlert = document.getElementsByClassName("btn-alert")[0];
-    const btnClear = document.getElementsByClassName("btn-clear")[0];
-    btnAlert.addEventListener('click', event => {
-      let memoContent = document.getElementById('memo').value;
-      alert(memoContent);
-    });
-    btnClear.addEventListener('click', event => {
-      document.getElementById('memo').value = '';
-      console.log(document.getElementById('memo'));
-    });
-
-    // $('.btn-alert').click(function () {
-    //   let memoContent = $('#memo').val();
+    // const btnAlert = document.getElementsByClassName("btn-alert")[0];
+    // const btnClear = document.getElementsByClassName("btn-clear")[0];
+    // btnAlert.addEventListener('click', event => {
+    //   let memoContent = document.getElementById('memo').value;
     //   alert(memoContent);
     // });
-    // $('.btn-clear').click(function () {
-    //   let memoContent = $('#memo').val("");
+    // btnClear.addEventListener('click', event => {
+    //   document.getElementById('memo').value = '';
+    //   console.log(document.getElementById('memo'));
     // });
+
+    $('.btn-alert').click(function () {
+      let memoContent = $('#memo').val();
+      alert(memoContent);
+    });
+    $('.btn-clear').click(function () {
+      let memoContent = $('#memo').val("");
+    });
 
 
     // -----------2장-----------
@@ -200,6 +200,7 @@
     $('.box2').mouseleave(function () {
       alert('mouseleave');
     });
+
 
   </script>
 </body>

@@ -116,6 +116,108 @@
       btnSelect.classList.remove('on');
     });
 
+
+    // 수업시간에 공유 된 다른 분들 코드
+    // 1. 이런 식으로 innerHTML보다는 createElement로 추가하는 방식이 권장
+    // const fragment = document.createDocumentFragment();
+
+    // ['Python', 'Java', 'JavaScript', 'C#', 'C/C++'].forEach(lang => {
+    //   const li = document.createElement('li');
+    //   const btn = document.createElement('button');
+    //   btn.setAttribute('type', 'button');
+    //   btn.appendChild(document.createTextNode(lang));
+    //   li.appendChild(btn);
+    //   fragment.appendChild(li);
+    // });
+    // list.appendChild(fragment);
+
+
+
+    // // 2. 혜진님 코드 - 접근성 고려
+    // // list에서 tab을 누르면 리스트 내에서 돈다.
+    // const btn = document.querySelector('.btn-select'); //select
+    // const ul = document.querySelector('.list-member'); //ul
+
+
+    // let arr = ["Python", "Java", "JavaScript", "C#", "C/C++"];
+    // for (let i = 0; i < arr.length; i++) {
+    //   const li = document.createElement("li");
+    //   ul.append(li);
+    //   li.innerHTML = `<button type='button'>${arr[i]}</button>`;
+    // }
+
+    // const listAll = ul.querySelectorAll('button'); // option list
+    // const firstOption = ul.querySelector('button'); //option first button
+    // const lastOption = listAll[listAll.length - 1]; //option last button
+
+
+    // const handlClickSelect = function () {
+    //   btn.classList.toggle('on');
+    //   ul.classList.toggle('on');
+    // }
+    // const handlClickOption = function (e) {
+    //   btn.innerHTML = e.target.innerText;
+    //   btn.classList.remove('on');
+    //   ul.classList.remove('on');
+    //   window.setTimeout(function () {
+    //     btn.focus();
+    //   }, 100);
+    // }
+
+    // //focus 이동
+    // const handleTabFoucus = function (e) {
+    //   if (!e.shiftKey && e.keyCode === 9) {
+    //     e.preventDefault();
+    //     window.setTimeout(function () {
+    //       firstOption.focus();
+    //     }, 100);
+    //   }
+    // };
+    // //shift+tab
+    // const handlShiftTabFoucus = function (e) {
+    //   if (e.shiftKey && e.keyCode === 9) {
+    //     e.preventDefault();
+    //     window.setTimeout(function () {
+    //       lastOption.focus();
+    //     }, 100);
+    //   }
+    // };
+    // //ESC키 
+    // const hadleEsc = function (e) {
+    //   if (e.keyCode === 27) {
+    //     btn.classList.remove('on');
+    //     ul.classList.remove('on');
+    //     window.setTimeout(function () {
+    //       btn.focus();
+    //     }, 100);
+    //   }
+    // }
+
+    // btn.addEventListener('click', handlClickSelect);
+    // ul.addEventListener('click', handlClickOption);
+
+    // btn.addEventListener('keydown', hadleEsc);
+    // ul.addEventListener('keydown', hadleEsc);
+
+    // lastOption.addEventListener('keydown', handleTabFoucus);
+    // firstOption.addEventListener('keydown', handlShiftTabFoucus);
+
+    // // 3. 수철님 코드
+    // // 이런 식으로 $에 함수를 넣어서 표시하는 방식도 가능하지만 jQuery랑 헷갈릴 수 있으니 개념만 잘 알아두자..!
+    // const $ = (selector) => document.querySelector(selector);
+    // $('.btn-select').addEventListener("click", function (event) {
+    //   event.target.classList.toggle("on");
+    // })
+
+    // // 4. 
+    // // 이벤트 위임의 경우 안전하게 if문으로 타겟 범위를 잘 설정해주어야 한다.
+    // // 안그럼 다 선택되어서 PythonJavaJavaScript... 이런식으로 값 설정이 되기도ㅠㅠ
+    // list.addEventListener('click', (event) => {
+    //   if (event.target.nodeName === "BUTTON") {
+    //     btn.innerText = event.target.innerText;
+    //     btn.classList.remove('on');
+    //   }
+    // });
   </script>
 </body>
 

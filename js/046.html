@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 요소 제어</title>
+</head>
+
+<body>
+  <!-- 2 -->
+  <ul></ul>
+  <button>Make me MORE!</button>
+  <!-- 3 -->
+  <div id="parentElement">
+    <span id="childElement">hello guys~</span>
+  </div>
+  <!-- 4 -->
+  <p></p>
+  <input type="text">
+  <button>Write Something!</button>
+  <strong class="sayHi">
+    반갑습니다.
+  </strong>
+
+  <!-- 9.4 -->
+  <article class="parent">
+    <ol>
+      <li><button class="btn-first" type="button">버튼1</button></li>
+      <li><button type="button">버튼2</button></li>
+      <li><button type="button">버튼3</button></li>
+    </ol>
+  </article>
+
+  <script>
+
+    // 2
+    // document.createElement(target); target 요소를 생성합니다.
+    // document.createTextNode(target); target 텍스트를 생성합니다.
+    // element.appendChild(target);    target 요소를 element의 자식으로 위치합니다.
+    // element.removeChild(target);    element의 target 자식 요소를 제거합니다.
+
+    const myBtn = document.querySelector("button");
+    const myUl = document.querySelector("ul");
+
+    myBtn.addEventListener('click', function () {
+      for (let i = 0; i < 5; i++) {
+        const myLi = document.createElement('li');
+        myUl.appendChild(myLi);
+      }
+    })
+
+
+    // 3
+    // parentElement.insertBefore(target, location); target요소를 element의 자식인 location 위치로 이동합니다.
+    var span = document.createElement("span");
+    var sibling = document.getElementById("childElement");
+    var parentDiv = document.getElementById("parentElement");
+    parentDiv.insertBefore(span, sibling);
+
+
+
+    // 4
+    const myBtn = document.querySelector("button");
+    const myP = document.querySelector("p");
+    const myInput = document.querySelector("input");
+
+    myBtn.addEventListener('click', function () {
+      myP.textContent = myInput.value;
+    });
+
+    // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+    myInput.addEventListener('input', () => {
+      myP.textContent = myInput.value;
+    });
+
+    myP.innerHTML = "<strong>I'm Strong!!</strong>";
+    myP.outerHTML = "<div></div>";
+
+    // innerHTML 은 요소(element) 내에 포함 된 HTML 마크업을 가져오거나 설정합니다.
+    // innerText 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다. (innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.)
+    // textContent 속성은 노드의 텍스트 콘텐츠를 표현합니다.
+    // --> innerHTML은 단순 텍스트일 경우에는 사용하지 말자. 비효율적!
+
+    const sayHi = document.querySelector('.sayHi');
+    sayHi.insertAdjacentHTML('beforebegin', '<span>안녕하세요 저는</span>');
+    sayHi.insertAdjacentHTML('afterbegin', '<span>재현입니다</span>');
+    sayHi.insertAdjacentHTML('beforeend', '<span>면접오시면</span>');
+    sayHi.insertAdjacentHTML('afterend', '<span>치킨사드릴게요</span>');
+
+    // 9.4
+    <article class="parent">
+      <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ol>
+    </article>
+
+
+  </script>
+</body>
+
+</html>
