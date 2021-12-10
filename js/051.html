@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <style>
     /* 직접 셀렉트 박스 만들기 */
     h2 {
@@ -101,19 +101,17 @@
   <script>
     const listMember = document.querySelector('.list-member');
     const btnSelect = document.querySelector('.btn-select');
+    let listArray = ['Python', 'Java', 'JavaScript', 'C#', 'C/C++', 'test'];
 
-    listMember.innerHTML = '<li><button type="button">Python</button></li>'
-      + '<li><button type="button">Java</button></li>'
-      + '<li><button type="button">JavaScript</button></li>'
-      + '<li><button type="button">C#</button></li>'
-      + '<li><button type="button">C/C++</button></li>';
+    listArray.forEach(e => {
+      listMember.innerHTML = `${listMember.innerHTML}<li><button type="button">${e}</button></li>`
+    });
 
     btnSelect.addEventListener('click', (event) => {
       btnSelect.classList.toggle('on');
     });
-    listMember.addEventListener('click', (event) => {
-      console.log(event.target.innerText);
 
+    listMember.addEventListener('click', (event) => {
       btnSelect.innerText = event.target.innerText;
       btnSelect.classList.remove('on');
     });
