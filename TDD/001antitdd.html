@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDD 추가적인 두번째 세팅</title>
+  <style>
+    article {
+      display: inline-block;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .viewer {
+      display: block;
+      font-size: 24px;
+      color: green;
+      margin: 50px 0 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 이 코드의 안좋은 점 -->
+  <!-- 1. html에서 js가 사용되고 있다.(onclick)
+      2. txt라는 변수가 전역으로 되어있다.
+      3. 기능에 대해 함수로 되어있지 않은 경우엔 테스트가 힘들다. (const viewer 부분)
+      4. 함수의 재사용성이 떨어진다 (push()의 inpTxt가 고정적) -->
+
+  <!-- 바람직한 테스트를 위해서는! -->
+  <!-- 1. 코드를 UI에서 완전히 분리합니다.
+      2. 자바스크립트를 JS 파일로 완전히 분리합니다.
+      3. 모든 기능은 함수로 구현합니다. -->
+
+  <article>
+    <strong class="viewer"></strong>
+    <input type="text" class="inp-txt">
+    <button class="btn-push" onclick="push()">적용</button>
+  </article>
+
+  <script>
+    let txt = "Hello Lions";
+
+    const viewer = document.querySelector('.viewer');
+    viewer.textContent = txt;
+
+    function push() {
+      const inpTxt = document.querySelector('.inp-txt');
+      viewer.textContent = inpTxt.value;
+    }
+  </script>
+</body>
+
+</html>
