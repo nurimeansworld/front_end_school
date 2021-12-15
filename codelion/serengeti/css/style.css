@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.start-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-wrap {
+  /* display: none; */
+}
