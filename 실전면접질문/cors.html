@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2. CORS</title>
+</head>
+
+<body>
+  <script>
+    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function () {
+      var superHeroes = request.response;
+      console.log(superHeroes);
+      // CHECK:: 여기서 보면 access-control-allo-origin: * 으로 설정이 되어있어서 console.log로 확인 가능
+      // 서버와 통신에서 허용되는 api를 미리 전달 받아서 그 경로로 작업하게 된다면 이런 이슈는 없을 것! 만약 에러가 뜬다면 서버 단에 요청
+      // CHECK:: 지금 mdn 예제는 mdn에서 허용해두어서 접근 가능한 것
+
+      // populateHeader(superHeroes);
+      // showHeroes(superHeroes);
+    }
+  </script>
+</body>
+
+</html>
