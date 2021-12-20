@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>좋은 습관 기르기 2 - 엄격모드</title>
+</head>
+
+<body>
+  <script>
+    // 2. 엄격 모드를 추가하면 아래가 에러가 뜬다
+    'use strict';
+
+    str = "hello strict";
+    var undefined = "undefined";
+    var Infinity = 100;   // 예약어 Infinity
+    Math.PI = 0;
+
+    const Employee = {
+      firstname: 'nuri',
+      lastname: 'nunu'
+    }
+    console.log('delete 전 : ', Employee.firstname);
+    delete Employee.firstname;
+    console.log('delete 후 : ', Employee.firstname);
+    delete Object.prototype;
+
+    function myFunc(a, a, b) {
+      console.log(a + a + b);
+
+    }
+    myFunc(1, 2, 3);  // 1. 결과가 7이 나온다.. 오ㅐ냐 엄격모드가 아니라! 조용한 에러처리
+  </script>
+</body>
+
+</html>

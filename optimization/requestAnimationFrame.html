@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>requestAnimationFrame 사용</title>
+  <style>
+    body {
+      margin: 100px;
+    }
+
+    .target {
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="target"></div>
+  <script>
+    const target = document.querySelector(".target");
+    let pos = 0;
+
+    // // 1. transform 으로 설정.
+    // document.addEventListener('keydown', move);
+
+    // function move(event) {
+    //   const keyName = event.key;
+    //   if (keyName === 'ArrowRight') {
+    //     pos += 5;
+    //     target.style.transform = `translateX(${pos}px)`;
+    //   }
+    //   if (keyName === 'ArrowLeft') {
+    //     pos -= 5;
+    //     target.style.transform = `translateX(${pos}px)`;
+    //   }
+    // }
+
+    // 2. requestAnimationFrame 으로 설정.
+    let keys = {};
+    document.addEventListener('keydown', move);
+    document.addEventListener('keyup', stop);
+
+    function move(event) {
+      keys[event.key] = true;
+      console.log(keys);
+
+    }
+    function stop(event) {
+      keys[event.key] = false;
+      console.log(keys);
+    }
+
+    function play() {
+      if (keys.ArrowRight) {
+        pos += 5;
+        target.style.transform = `translateX(${pos}px)`;
+      }
+      if (keys.ArrowLeft) {
+        pos -= 5;
+        target.style.transform = `translateX(${pos}px)`;
+      }
+      window.requestAnimationFrame(play);
+    }
+    window.requestAnimationFrame(play);
+
+    // // requestAni.. 이걸 계속 실행하게 해야한다.
+    // // 이렇게 계속 돌아도 웹이 멈추지 않는다. 자체적으로 최적화를 해주기 때문!
+    // // 보통 이런 식으로 사용
+    // window.requestAnimationFrame(test);
+    // function test() {
+    //   console.log('test');
+    //   window.requestAnimationFrame(test);
+    // }
+  </script>
+</body>
+
+</html>
