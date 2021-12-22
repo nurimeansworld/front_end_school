@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas tutorial</title>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <a href="https://developer.mozilla.org/ko/docs/Web/API/Canvas_API" target="_blank">공식 문서 Canvas_API</a>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    function drawRect(ctx) {
+      let x = 10, y = 20, w = 150, h = 100;
+      ctx.fillStyle = 'green';
+      ctx.fillRect(x, y, w, h);
+    }
+    function triangleRed(ctx) {
+      ctx.beginPath();
+      ctx.moveTo(75, 50);
+      ctx.lineTo(100, 75);
+      ctx.lineTo(100, 25);
+      ctx.fillStyle = 'red';
+      ctx.fill();
+    }
+    function triangleGreen(ctx) {
+      ctx.beginPath();
+      ctx.moveTo(75, 50);
+      ctx.lineTo(75, 100);
+      ctx.lineTo(25, 100);
+      ctx.fillStyle = 'green';
+      ctx.fill();
+    }
+
+    triangleRed(ctx);
+    triangleGreen(ctx);
+  </script>
+</body>
+
+</html>
