@@ -3,6 +3,7 @@ import './App.css';
 function App() {
   // 4. js를 적용해보자
   const text = '이건 js를 활용해 넣은 텍스트!';
+  let today = new Date();
 
   return (
     //여기는 js할 때와 똑같이 주석을 입력합니다!
@@ -22,17 +23,21 @@ function App() {
       {/* 4. js를 적용해보자 */}
       <p>{text}</p>
 			<div/>{/* 이런식으로 바로 닫히게 할 수도 있어요! */}
-		</div>
 
-    // <div className="App">
-    //   <header className="App-header">
-    //     <p>Edit <code>src/App.js</code> and save to reload.</p>
-    //     <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+      <div className="today-sec">
+        <p>지금은 {today.getFullYear()}년 {today.getMonth()+1}월 {today.getDate()}일 {today.getHours()+':'+today.getMinutes()+':'+today.getSeconds()} 입니다.</p>
+      </div>
+		</div>
   );
 }
+// function getCurrentTime() {
+
+//   return (
+//     <div>
+
+//     </div>
+//   );
+// }
 
 export default App;
+// export default getCurrentTime;
