@@ -3,6 +3,7 @@
 import Licat from './component/licat';
 import Today from './component/today';
 import Mycustom from './component/mycustom';
+import Events from './component/events';
   
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Licat name="개리"/>
       <Today />
       <Mycustom name="누리" color="lavendar" food="소이템페롤"/>
+      <Events />
     </>
   );
 }
