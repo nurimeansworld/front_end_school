@@ -2,11 +2,12 @@ import { useState } from 'react';
 // 1. createGlobalStyle를 import 하고
 import { createGlobalStyle } from 'styled-components';
 import './App.css';
+import reset from 'styled-reset'
 import Hello from './component/hello';
 import Product from './component/product';
 
 // 2. createGlobalStyle로 style 설정
-const GlobalStyle = createGlobalStyle`ul {background-color: darkgrey;}`;
+const GlobalStyle = createGlobalStyle`${reset} ul {background-color: darkgrey;}`;
 
 function PageContent(listName) {
   if(listName.checkListName === 'hello'){
