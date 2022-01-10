@@ -1,7 +1,12 @@
 import { useState } from 'react';
+// 1. createGlobalStyle를 import 하고
+import { createGlobalStyle } from 'styled-components';
 import './App.css';
 import Hello from './component/hello';
 import Product from './component/product';
+
+// 2. createGlobalStyle로 style 설정
+const GlobalStyle = createGlobalStyle`ul {background-color: darkgrey;}`;
 
 function PageContent(listName) {
   if(listName.checkListName === 'hello'){
@@ -16,7 +21,6 @@ function PageContent(listName) {
 
   }
 }
-
 function Navbar() {
   const [listName, setListName] = useState('hello');
   const checkId = (e) => {
@@ -45,9 +49,9 @@ function Navbar() {
 function App() {
   return (
   <>
+    {/* 3. 여기에 선언 */}
+    <GlobalStyle/>
     <Navbar />
-    {/* <Hello name="loopy"/> */}
-    {/* <Product /> */}
   </>
   );
 }
