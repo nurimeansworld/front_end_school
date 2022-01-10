@@ -1,10 +1,12 @@
 import { useState } from 'react';
 // 1. createGlobalStyle를 import 하고
 import styled, {createGlobalStyle} from 'styled-components';
-import './App.css';
+import './App.module.css';
+import styledCom from './question.module.css'
 import reset from 'styled-reset'
 import Hello from './component/hello';
 import Product from './component/product';
+
 
 // 2. createGlobalStyle로 style 설정
 const GlobalStyle = createGlobalStyle`
@@ -67,6 +69,26 @@ function Navbar() {
     </>
   )
 }
+function Question(){
+  return (
+    <>
+      <nav className={styledCom.box}>
+        <ul>
+          <li id="detail" className={styledCom.text}>
+            상세정보
+          </li>
+          <li id="qa" className={styledCom.text}>
+            Q&A
+          </li>
+          <li id="review" className={styledCom.text}>
+            Review
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+}
+
 
 function App() {
   return (
@@ -74,6 +96,7 @@ function App() {
     {/* 3. 여기에 선언 */}
     <GlobalStyle/>
     <Navbar />
+    <Question />
   </>
   );
 }
