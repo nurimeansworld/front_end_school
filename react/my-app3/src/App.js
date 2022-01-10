@@ -7,45 +7,40 @@ const CardDiv = styled.div`
   border-radius: 10px;
   border: 1px solid #c4c4c4;
   margin-bottom: 20px;
-  width: 200px;
+  width: ${(props) => (props.className === "setting" ? "200px" : "400px")};
 `;
-const CardOne = (props) => {
+const Card = (props) => {
   return(
     <>
-      <CardDiv>
-        <h3>챌린지 설정</h3>
+      <CardDiv className={props.className}>
+        <h3>{props.value}</h3>
         <hr />
-        <button>초기화</button>
-        <button>저장하기</button>
+        {/* 2. props.children 을 이용해 인식할 위치를 선언하고 */}
+        <div>{props.children}</div>
       </CardDiv>
     </>
   )
 }
-const CarddivTwo = styled.div`
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #c4c4c4;
-  margin-bottom: 20px;
-  width: 200px;
-`;
-const CardTwo = (props) => {
-  return (
+// 1. children으로 넣을 컴포넌트 생성 후 
+const SettingCard = () => {
+  return(
     <>
-      <CarddivTwo>
-        <h3>서비스 공유하기</h3>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ut
-          eveniet, laudantium, deleniti autem sequi molestias magni quia,
-          aliquam et praesentium nostrum dolores culpa cupiditate unde
-          doloremque labore beatae accusamus.
-        </p>
-        <div>
-          <button>이미지 저장</button>
-          <button>트위터</button>
-          <button>페이스북</button>
-        </div>
-      </CarddivTwo>
+      <button>초기화</button>
+      <button>저장하기</button>
+    </>
+  )
+}
+const ShareCard = () => {
+  return(
+    <>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ut eveniet, laudantium, deleniti autem sequi molestias magni quia, aliquam et praesentium nostrum dolores culpa cupiditate unde doloremque labore beatae accusamus.
+      </p>
+      <div>
+        <button>이미지 저장</button>
+        <button>트위터</button>
+        <button>페이스북</button>
+      </div>
     </>
   )
 }
@@ -53,8 +48,13 @@ const CardTwo = (props) => {
 function App() {
   return (
     <>
-      <CardOne />
-      <CardTwo />
+      <Card className="setting" value="챌린지 설정">
+        {/* 3. 실제 children에 들어갈 컴포넌트 위치에 설정 */}
+        <SettingCard />
+      </Card>
+      <Card className="share" value="서비스 공유하기">
+        <ShareCard />
+      </Card>
     </>
   );
 }
