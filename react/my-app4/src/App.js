@@ -5,7 +5,9 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from './Components/Home';
 import Hello from './Components/Hello';
 import Time from './Components/Time';
-import Resume from './Components/Resume';
+// 6. 중첩 라우터 - ResumeRouter 추가
+// import Resume from './Components/Resume';
+import ResumeRouter from './Components/ResumeRouter';
 
 function One(){
   return <h1>Route One</h1>
@@ -40,14 +42,14 @@ function App() {
         <Route path="/hello" render={() => <Hello name="개리" />} />
         <Route path="/Time" component={Time}/>
         {/* 3-2. component props 자식으로 전달 */}
-        <Route path="/Resume">
-          <Resume
+        <Route path="/Resume" component={ResumeRouter}>
+          {/* <Resume
             hello="Hello"
             name="개리"
             hobby="게임"
             food="고기"
             color="blue"
-          />
+          /> */}
         </Route>
       </Switch>
     </BrowserRouter>
