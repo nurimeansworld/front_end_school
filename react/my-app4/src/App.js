@@ -1,6 +1,6 @@
 import React from "react";
 // 1. react-router-dom 설치, import
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 import Home from './Components/Home';
 import Hello from './Components/Hello';
@@ -32,21 +32,24 @@ function App() {
 
       {/* 라우트를 감싸줍니다. */}
       {/* 3. path, path-exact, component, component-props 설정 방법 */}
-      <Route path="/" exact component={Home}/>
-      <Route path="/one" component={One}/>
-      {/* 3-1. component props render 값으로 전달 */}
-      <Route path="/hello" exact render={() => <Hello name="개리" />} />
-      <Route path="/Time" exact component={Time}/>
-      {/* 3-2. component props 자식으로 전달 */}
-      <Route path="/Resume" exact>
-        <Resume
-          hello="Hello"
-          name="개리"
-          hobby="게임"
-          food="고기"
-          color="blue"
-        />
-      </Route>
+      {/* 5. Switch를 추가하면 제일 첫째로 매칭된 것을 렌더링. exact 작성을 최소화 할 수 있다. */}
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/one" component={One}/>
+        {/* 3-1. component props render 값으로 전달 */}
+        <Route path="/hello" render={() => <Hello name="개리" />} />
+        <Route path="/Time" component={Time}/>
+        {/* 3-2. component props 자식으로 전달 */}
+        <Route path="/Resume">
+          <Resume
+            hello="Hello"
+            name="개리"
+            hobby="게임"
+            food="고기"
+            color="blue"
+          />
+        </Route>
+      </Switch>
     </BrowserRouter>
    
   );
