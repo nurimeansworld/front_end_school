@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Resume from './Resume';
 
@@ -25,6 +25,7 @@ const resumeId = ({ match }) => {
   }
   return (
     <>
+      <Outlet />
       <Resume hello={result.hello} name={result.name} hobby={result.hobby} food={result.food} color={result.color} />
     </>
   )
@@ -37,7 +38,7 @@ const ResumeRouter = ({ match }) => {
       <Link to="/resume/2" style={{ margin: "0 5px" }}>Resume2</Link>
       <Link to="/resume/3" style={{ margin: "0 5px" }}>Resume3</Link>
 
-      <Switch>
+      <Routes> {/* 6. v6 문법으로 변경 */}
         {/* <Route>
           <Resume
             hello="Hello"
@@ -51,11 +52,11 @@ const ResumeRouter = ({ match }) => {
         <Route path="/resume/2" component={resumeId}></Route>
         <Route path="/resume/3" component={resumeId}></Route> */}
 
-        <Route exact path={match.path} component={resumeId}></Route>
-        <Route path={`${match.path}/1`} component={resumeId}></Route>
-        <Route path={`${match.path}/2`} component={resumeId}></Route>
-        <Route path={`${match.path}/3`} component={resumeId}></Route>
-      </Switch>
+        <Route path={match.path} element={resumeId}></Route>
+        <Route path={`${match.path}/1`} element={resumeId}></Route>
+        <Route path={`${match.path}/2`} element={resumeId}></Route>
+        <Route path={`${match.path}/3`} element={resumeId}></Route>
+      </Routes>
     </>
   )
 }
