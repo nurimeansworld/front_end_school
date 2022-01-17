@@ -1,17 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const plus = document.querySelector('#plus');
+const minus = document.querySelector('#minus');
+const number = document.querySelector('#number');
+const quantity = document.querySelector('#quantity');
+const totalPrice = document.querySelector('#total');
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const PRICE = 17500;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let count = 0;
+
+// UI Update - text
+const updateResult = (c) => {
+  number.innerText = count;
+  quantity.innerHTML = c;
+  totalPrice.innerHTML = c * PRICE;
+};
+
+// State Change
+const addNumber = () => {
+  count += 1;
+  minus.disabled = false;
+  updateResult(count);
+};
+
+// State Change
+const substractNumber = () => {
+  count -= 1;
+  plus.disabled = false;
+  updateResult(count);
+};
+
+// Init
+number.innerHTML = count;
+updateResult(count);
+
+// Event
+plus.addEventListener("click", addNumber);
+minus.addEventListener("click", substractNumber);
