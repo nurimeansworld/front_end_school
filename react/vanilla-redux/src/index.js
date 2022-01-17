@@ -1,3 +1,6 @@
+// 1. import redux
+import { createStore } from 'redux';
+
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
 const number = document.querySelector('#number');
@@ -6,32 +9,40 @@ const totalPrice = document.querySelector('#total');
 
 const PRICE = 17500;
 
-let count = 0;
+// CHECK:: keywords : reducer, dispatch, subscribe
 
-// UI Update - text
-const updateResult = (c) => {
-  number.innerText = count;
-  quantity.innerHTML = c;
-  totalPrice.innerHTML = c * PRICE;
-};
-
-// State Change
+// 4. dispatch : 기존의 addNumber, substractNumber를 state를 넘기는 형식으로 수정
 const addNumber = () => {
-  count += 1;
-  minus.disabled = false;
-  updateResult(count);
+  store.dispatch({ type: 'ADD' });
 };
-
-// State Change
 const substractNumber = () => {
-  count -= 1;
-  plus.disabled = false;
-  updateResult(count);
+  store.dispatch({ type: 'SUB' });
 };
 
-// Init
-number.innerHTML = count;
-updateResult(count);
+// 2. countReducer 추가
+const countReducer = (state = 0, action) => {
+  switch (action.type) {
+    case 'ADD':
+      return state += 1;
+    case 'SUB':
+      return state -= 1;
+    default:
+      return state;
+  }
+
+}
+// 3. store 추가
+const store = createStore(countReducer);
+
+// 5. subscribe : UI Update - updateResult
+const handleWrite = () => {
+  number.innerText = store.getState();
+  quantity.innerText = store.getState();
+  totalPrice.innerText = store.getState() * PRICE;
+
+  minus.disabled = (number.innerText > 0) ? false : true;
+}
+store.subscribe(handleWrite);
 
 // Event
 plus.addEventListener("click", addNumber);
