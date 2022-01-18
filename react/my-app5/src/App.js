@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react'; 
+import React, { useState, useEffect, useRef, useMemo } from 'react'; 
 
 // Hook - 1.useEffect
 function Counter() {
@@ -91,6 +91,60 @@ function Login(){
   )
 }
 // // Hook - 2. useRef
+// Hook - 3. useMemo
+function Memo () {
+  const nameInpt = useRef(null);
+  const ageInpt = useRef(null);
+
+  const [info, setInfo] = useState('');
+  const [nameValue, setNameValue] = useState('');
+  const [ageValue, setAgeValue] = useState('');
+
+  const getNum = (li) => {
+    console.log('getNum: 렌더링');
+    return li.length;
+  };
+
+   const n = useMemo(() => getNum(info), [info]);
+
+  const handleName = (e) => {
+    setNameValue(e.target.value);
+    console.log('handelName: 렌더링');
+  };
+
+  const handleAge = (e) => {
+    setAgeValue(e.target.value);
+    console.log('handleAge: 렌더링');
+  };
+
+  function handleForm(e) {
+    e.preventDefault();
+
+    console.log('handleForm');
+
+
+  }
+
+  
+
+  
+
+
+  return(
+    <form style={{ display: "flex", flexDirection: "column" }}>
+      <label>이름 : <input type="text" onChange={handleName} ref={nameInpt}/></label>
+      <label>나이 : <input type="text" onChange={handleAge} ref={ageInpt}/></label>
+
+      <button type="submit" style={{ width: "100px" }} onClick={handleForm}>로그인</button>
+      <span>입력한 이름 : {nameValue}</span>
+      <span>입력한 나이 : {ageValue}</span>
+      <span>{n}</span>
+    </form>
+  )
+}
+// // Hook - 3. useMemo
+
+
 
 
 
@@ -105,6 +159,8 @@ function App() {
       <Time/>
       <h2>2) useRef</h2>
       <Login/>
+      <h2>3) useMemo</h2>
+      <Memo />
     </>
   );
 }
