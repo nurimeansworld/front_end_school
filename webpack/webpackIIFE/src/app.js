@@ -1,1 +1,1 @@
-console.log(plus(3,4));
+console.log(myObj.plus(3,4));
