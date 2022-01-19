@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- role : 보조기기가 해당 요소의 역할을 인식하게 합니다. -->
+  <!-- aria-label : 요소의 제목 -->
+  <!-- aria-controls : 해당요소가 참조하는 요소를 말합니다. -->
+  <!-- aria-labelledby :  해당 탭패널이 어떤 탭을 참조하는지 나타냅니다.-->
+
+  <ul role="tablist" aria-label="탭의 제목">
+    <li id="tab1" role="tab" aria-controls="sectionFirst"><button type="button">첫번째</button></li>
+    <li id="tab2" role="tab" aria-controls="sectionSecond"><button type="button">두번째</button></li>
+    <li id="tab3" role="tab" aria-controls="sectionThird"><button type="button">세번째</button></li>
+    <li id="tab4" role="tab" aria-controls="sectionForth"><button type="button">네번째</button></li>
+  </ul>
+  <section id="sectionFirst" role="tabpanel" aria-labelledby="tab1"></section>
+  <section id="sectionSecond" role="tabpanel" aria-labelledby="tab2"></section>
+  <section id="sectionThird" role="tabpanel" aria-labelledby="tab3"></section>
+  <section id="sectionForth" role="tabpanel" aria-labelledby="tab4"></section>
+</body>
+
+</html>
