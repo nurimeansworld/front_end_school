@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 
+// 1. class component
 class ClassComp extends Component {
 
   // mount : 처음 컴포넌트가 나타났을 때
@@ -67,11 +68,31 @@ class ClassComp extends Component {
     );
   }
 }
-
-class App extends Component {
+class App1 extends Component {
   render() {
     return <ClassComp />;
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// 2. functional component
+function App2() {
+  const [num, setNum] = useState(0);
+
+  const onClick = () => {
+    setNum(num + 1);
+  };
+
+  useEffect(() => {  // 1 - useEffect
+    console.log("1. componentDidMount");
+  }, []); 
+ 
+
+  useEffect(() => { // 2 - useEffect
+    console.log("2. componentDidUpdate");
+    return console.log("3. componentWillUnmount");
+  }, [num]);
+  return <button onClick={onClick}>{num}</button>;
+}
+
+ReactDOM.render(<App1 />, document.getElementById("root"));
+ReactDOM.render(<App2 />, document.getElementById("root"));
