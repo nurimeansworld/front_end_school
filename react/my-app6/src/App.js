@@ -1,5 +1,7 @@
 // import './App.css';
-import React from "react";
+import React, { createContext } from "react";
+
+const userInfo = createContext({id: 'nuriisfree', name: 'nuri'});
 
 const HelloNuri2 = (props) => {
 
@@ -25,9 +27,13 @@ const HelloNuri = (props) => {
 
 function App() {
   return (
-    <>
-      <HelloNuri value={{name: 'nuri', id: 'nuriisfree'}}/>
-    </>
+    // <>
+    //   <HelloNuri value={{id: 'nuriisfree', name: 'nuri'}}/>
+    // </>
+    // 이렇게 createContext한 변수에 .consumer 메소드를 이용해 값을 받아와 진행
+    <userInfo.Consumer>
+      {(value) => (<HelloNuri value={value} />)}
+    </userInfo.Consumer>
   );
 }
 
