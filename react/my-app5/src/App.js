@@ -154,12 +154,12 @@ function App() {
   return (
     <>
       <h1>Hook</h1>
-      <h2>1) useEffect</h2>
+      <h2>1. useEffect</h2>
       <Counter/>
       <Time/>
-      <h2>2) useRef</h2>
+      <h2>2. useRef</h2>
       <Login/>
-      <h2>3) useMemo</h2>
+      <h2>3. useMemo</h2>
       <Memo />
     </>
   );
